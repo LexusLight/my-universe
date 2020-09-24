@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35679adb-1f2f-4804-94cd-844fd50d5f3c" name="Default Changelist" comment="" />
+    <list default="true" id="35679adb-1f2f-4804-94cd-844fd50d5f3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/babel.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Либы" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +66,8 @@
       <updated>1600771254413</updated>
       <workItem from="1600771255495" duration="941000" />
       <workItem from="1600852152730" duration="1288000" />
+      <workItem from="1600854772371" duration="3151000" />
+      <workItem from="1600979615947" duration="1510000" />
     </task>
     <task id="LOCAL-00001" summary="giugiu">
       <created>1600853440524</created>
@@ -88,5 +98,11 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="giugiu" />
     <option name="LAST_COMMIT_MESSAGE" value="giugiu" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="567" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600979917730">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="567" y="231" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1474.864@62.0.1474.864" timestamp="1600979917730" />
   </component>
 </project>
