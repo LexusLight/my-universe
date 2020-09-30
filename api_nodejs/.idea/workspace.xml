@@ -20,12 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35679adb-1f2f-4804-94cd-844fd50d5f3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Либы" beforeDir="false" afterPath="$PROJECT_DIR$/Либы" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../react/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +57,16 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JSLearn" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\api_nodejs\src" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\static" />
       <recent name="D:\GitHub\my-universe\api_nodejs" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,7 +80,12 @@
       <workItem from="1600771255495" duration="941000" />
       <workItem from="1600852152730" duration="1288000" />
       <workItem from="1600854772371" duration="3151000" />
-      <workItem from="1600979615947" duration="5104000" />
+      <workItem from="1600979615947" duration="5622000" />
+      <workItem from="1601055319274" duration="3216000" />
+      <workItem from="1601216793721" duration="1738000" />
+      <workItem from="1601358854447" duration="4018000" />
+      <workItem from="1601405843197" duration="7899000" />
+      <workItem from="1601465719668" duration="1207000" />
     </task>
     <task id="LOCAL-00001" summary="giugiu">
       <created>1600853440524</created>
@@ -105,9 +118,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="giugiu" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="567" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600979917730">
+    <state x="567" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601414593024">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="567" y="231" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1474.864@62.0.1474.864" timestamp="1600979917730" />
+    <state x="567" y="231" key="#com.intellij.fileTypes.FileTypeChooser/62.0.1474.864@62.0.1474.864" timestamp="1601414593024" />
+    <state x="579" y="186" key="FileChooserDialogImpl" timestamp="1601221133717">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="579" y="186" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1601221133717" />
+    <state x="456" y="197" key="run.anything.popup" timestamp="1601407648539">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="456" y="197" key="run.anything.popup/62.0.1474.864@62.0.1474.864" timestamp="1601407648539" />
   </component>
 </project>

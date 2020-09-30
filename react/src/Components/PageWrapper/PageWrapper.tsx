@@ -10,7 +10,7 @@ const PageWrapper = () => {
     return (
         <BrowserRouter>
             <div className={style.hat}>
-                Это Обёртка
+                Невероятная шапка сайта
             </div>
             <br/>
             <Route path={'/profile'}><Profile/></Route>
