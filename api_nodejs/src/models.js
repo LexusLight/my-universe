@@ -1,5 +1,4 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
-
 const sequelize = new Sequelize('sqlite://database.db');
 
 class User extends Model {}
@@ -10,58 +9,119 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        img_url:{
+            type: DataTypes.STRING,
+            allowNull:false,
+            defaultValue:'/default/def.img'
+        },
         username: {
             type: DataTypes.STRING,
             unique: true,
+            defaultValue: "@user"+Math.round(Math.random() * 100000),
             allowNull: false
         },
         email:{
           type: DataTypes.STRING,
           unique:true,
-          allowNull:true,
+          allowNull:false,
         },
-        link: {
-            type: DataTypes.STRING,
-            unique: true,
-            allowNull: false,
-            defaultValue: "@link",
-        },
-        status: {
-            type: DataTypes.STRING,
-        },
-        vk: {
-            type: DataTypes.STRING,
-            defaultValue: "no vk"
-        },
-        deviantart: {
-            type: DataTypes.STRING,
-            defaultValue: "no deviantart"
-        },
-        furaffinity: {
-            type: DataTypes.STRING,
-            defaultValue: "no FA"
-        },
-        twitter: {
-            type: DataTypes.STRING,
-            defaultValue: "no twitter"
-        },
-        facebook: {
-            type: DataTypes.STRING,
-            defaultValue: "no facebook"
-        },
-
+        password:{
+            type:DataTypes.STRING,
+            allowNull:false,
+        }
     },
     { sequelize, modelName: 'user' }
     );
 
-const register = async (username,realname) => {
-    await sequelize.sync();
-    const user = await User.create({
-        username: username,
-        realname: realname,
-    });
-};
+class UserLink extends Model {}
+UserLink.init(
+    {
+        id : {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        url: {
+            type: DataTypes.STRING,
+            unique: true,
+            allowNull: false,
+        },
+        link_name:{
+            type: DataTypes.STRING,
+            unique:false,
+            allowNull:true,
+        },
+    },
+    { sequelize, modelName: 'user_link' }
+);
+
+class Person extends Model{}
+Person.init(
+    {
+        id:{
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        img_url:{
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        name:{
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique:false,
+        },
+        age:{
+            type: DataTypes.INTEGER,
+            allowNull:false,
+            defaultValue:21,
+        },
+        gender:{
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue:"unknown",
+        },
+        about:{
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        quote:{
+            type: DataTypes.STRING,
+            allowNull:true
+        }
+    },
+    {sequelize, modelName:'person'}
+)
+
+class PersonImage extends Model{}
+PersonImage.init(
+    {
+        id:{
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        img_name:{
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: "image"+this.id,
+        },
+        img_url: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+    },
+    {sequelize, modelName:'person_image'}
+)
+
+User.hasMany(UserLink, {onDelete: "cascade"});
+User.hasMany(Person, {onDelete: "cascade"});
+Person.hasMany(PersonImage, {onDelete:"cascade"});
+
+sequelize.sync();
 
 module.exports = {
-    register,
+    User,
+    UserLink,
 }

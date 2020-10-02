@@ -20,18 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35679adb-1f2f-4804-94cd-844fd50d5f3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/queries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/logger.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Либы" beforeDir="false" afterPath="$PROJECT_DIR$/Либы" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../react/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JSLearn" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -86,6 +83,7 @@
       <workItem from="1601358854447" duration="4018000" />
       <workItem from="1601405843197" duration="7899000" />
       <workItem from="1601465719668" duration="1207000" />
+      <workItem from="1601645975797" duration="15456000" />
     </task>
     <task id="LOCAL-00001" summary="giugiu">
       <created>1600853440524</created>
@@ -126,6 +124,10 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="579" y="186" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1601221133717" />
+    <state x="457" y="117" key="SettingsEditor" timestamp="1601649138584">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="457" y="117" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1601649138584" />
     <state x="456" y="197" key="run.anything.popup" timestamp="1601407648539">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
