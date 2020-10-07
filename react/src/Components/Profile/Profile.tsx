@@ -28,7 +28,7 @@ const Profile = () => {
             <form onSubmit={addPerson}>
                 <input type="text" value={name} onChange={nameHandler}/>
                 <br/>
-                <input type="file"/>
+                {/*<input type="file"/>*/}
                 <br/>
                 <textarea value={about} onChange={aboutHandler} />
                 <br/>
