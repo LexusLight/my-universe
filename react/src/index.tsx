@@ -4,17 +4,6 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import PageWrapper from "./Components/PageWrapper/PageWrapper";
 import {Provider} from "mobx-react";
-import mainStore from "./Stores/MenuStore";
-
-
-
-const stores = {
-    mainStore,
-    // optionsStore,
-    // ButtonStore : mainStore.ButtonStore,
-    // FioStore : mainStore.FioStore,
-    // EmailStore : mainStore.EmailStore
-};
 
 ReactDOM.render(
   <React.StrictMode>

@@ -5,7 +5,6 @@ import style from './PageWrapper.module.css'
 import Profile from "../Profile/Profile";
 import World from "../World/World";
 import Character from "../Character/Character";
-import Menu from "./Menu/Menu";
 import {Provider} from "mobx-react";
 
 const PageWrapper = () => {
@@ -14,7 +13,6 @@ const PageWrapper = () => {
             <div className={style.hat}>
                 Невероятная шапка сайта
             </div>
-            <Menu/>
             <br/>
             <Route path={'/profile'}><Profile/></Route>
             <Route path={'/world'}><World/></Route>

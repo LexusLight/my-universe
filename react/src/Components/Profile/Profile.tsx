@@ -8,8 +8,16 @@ const Profile = () => {
     let [name,setName] = useState("noname");
     let [about,setAbout] = useState("about");
 
-    const addPerson = (event:any) => {
-        alert(name + "- имя," + about + "- описание.");
+    const addPerson = async(event:any) => {
+        event.preventDefault();
+        let response = await fetch('http://localhost:1337/proverka', {
+            headers: {'Content-Type':'application/json'},
+            mode: 'cors',
+            method: 'GET',
+        });
+
+        let json = await response.json();
+        console.log(json);
     }
 
     const nameHandler = (event:any) => {

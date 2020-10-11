@@ -20,22 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/Menu/Menu.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/Menu/Menu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Stores/MenuStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/App.tsx" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/Components/Person/Person.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/Components/Person/Person.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/Menu/Menu.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/Menu/Menu.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Stores/MenuStore.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/serviceWorker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/serviceWorker.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/setupTests.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +50,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/PageWrapper/Menu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/Person" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\react\src\Components\PageWrapper\Menu" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\my-universe\react\src\Store" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\react\src\Components\Person" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\PageWrapper\Menu" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,6 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602092592800</updated>
       <workItem from="1602092594944" duration="9486000" />
+      <workItem from="1602171254433" duration="860000" />
+      <workItem from="1602441663927" duration="7908000" />
     </task>
     <servers />
   </component>
@@ -92,5 +91,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

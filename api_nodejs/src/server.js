@@ -2,12 +2,20 @@
 // const express = require('express');
 const path = require('path')
 const express = require('express')
+const winston = require('winston')
 const {registerUser,addLink} = require('./queries')
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, "../static")));
 // запуск статического файлового сервера,
+
+app.use((request, response, next) => {
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Content-Type, X-Requested-With");
+    next();
+});
+//
 
 app.get('/register', async (request, response) => {
     let username = request.query.username;
@@ -16,7 +24,7 @@ app.get('/register', async (request, response) => {
         let user = await registerUser(username,email);
         response.send("Пользователь с id " + user.id + " успешно создан!");
     }catch (e){
-        response.send("Что-то пошло не так....")
+        response.send("Что-то пошло не так...."+username+email)
     }
 });
 
@@ -30,6 +38,12 @@ app.get('/addlink', async (request, response) => {
     }catch (e){
         response.send("Ошибка!");
     }
+});
+
+app.get('/proverka', (request, response) => {
+    let obj = {aaaa:'aaaaa'};
+    response.json(obj);
+    console.log("WOW");
 });
 
 app.listen(1337, () => {
