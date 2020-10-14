@@ -1,4 +1,4 @@
-const {Sequelize} = require('sequelize');
+const {Sequelize,Model} = require('sequelize');
 const sequelize = new Sequelize('sqlite://database.db');
 const {User,UserLink} = require('./models');
 const bcrypt = require('bcrypt');
@@ -22,9 +22,15 @@ const authUser = async (username, password) => {
     await sequelize.sync();
     try {
         let user = await User.findOne({
-            where:{'username':username}
+            where:{
+                username:username
+            },
         });
-        if(user.password == password){
+
+        let new_hash = await bcrypt.hash(password, user.password);
+        let db_hash = user.password;
+
+        if( db_hash == new_hash){
             return ("Пароли совпадают");
         }else{
             return ("Пароли не совпадают");
@@ -53,5 +59,6 @@ const addLink = async (username,url,link_name) => {
 
 module.exports = {
     registerUser,
+    authUser,
     addLink,
 }

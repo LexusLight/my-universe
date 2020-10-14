@@ -1,11 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import style from './PageWrapper.module.css'
 import Profile from "../Profile/Profile";
 import World from "../World/World";
 import Character from "../Character/Character";
-import {Provider} from "mobx-react";
 
 const PageWrapper = () => {
     return (
@@ -14,9 +13,11 @@ const PageWrapper = () => {
                 Невероятная шапка сайта
             </div>
             <br/>
-            <Route path={'/profile'}><Profile/></Route>
-            <Route path={'/world'}><World/></Route>
-            <Route path={'/character'}><Character/></Route>
+            <Switch>
+                <Route path={'/profile'}><Profile/></Route>
+                <Route path={'/world'}><World/></Route>
+                <Route path={'/character'}><Character/></Route>
+            </Switch>
         </BrowserRouter>
 
     );

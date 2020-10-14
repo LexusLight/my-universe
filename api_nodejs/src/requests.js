@@ -1,8 +1,7 @@
-const {registerUser,addLink} = require('./queries')
+const {registerUser,authUser,addLink} = require('./queries')
 
 const addRequests = (app) => {
     app.post('/register', async (request, response) => {
-
         try {
             let username = request.body.username;
             let email = request.body.email;
@@ -11,27 +10,33 @@ const addRequests = (app) => {
             response.send("Пользователь " + username + " успешно создан!");
 
         }catch (e){
-            response.send("Что-то пошло не так.... "+e.toString())
+            response.send("Что-то пошло не так.... "+e.toString());
         }
     });
 
-    app.get('/addlink', async (request, response) => {
-        try{
-            let username = request.query.username;
-            let url = request.query.url;
-            let link_name = request.query.link_name;
-            let link = await addLink(username,url,link_name);
-            response.send("Привязана ссылка "+link.link_name);
-        }catch (e){
-            response.send("Ошибка!");
-        }
+    app.post('/auth', async (request, response)=>{
+        let username = request.body.username;
+        let password = request.body.password;
+        response.send(await authUser(username,password));
     });
 
-    app.get('/proverka', (request, response) => {
-        let obj = {aaaa:'aaaaa'};
-        response.json(obj);
-        console.log("WOW");
-    });
+    // app.get('/addlink', async (request, response) => {
+    //     try{
+    //         let username = request.query.username;
+    //         let url = request.query.url;
+    //         let link_name = request.query.link_name;
+    //         let link = await addLink(username,url,link_name);
+    //         response.send("Привязана ссылка "+link.link_name);
+    //     }catch (e){
+    //         response.send("Ошибка!");
+    //     }
+    // });
+    //
+    // app.get('/proverka', (request, response) => {
+    //     let obj = {aaaa:'aaaaa'};
+    //     response.json(obj);
+    //     console.log("WOW");
+    // });
 }
 
 module.exports = {
