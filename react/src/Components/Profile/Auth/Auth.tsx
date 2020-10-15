@@ -22,7 +22,8 @@ const Auth = () => {
             method: 'POST',
             body: JSON.stringify(body),
         });
-        let text = await response.text();
+        let status = response.status;
+        let text = (status == 401) ? await response.text(): "Вы авторизованы.";
         setMessage(text);
     }
 

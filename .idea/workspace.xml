@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/queries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/requests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <workItem from="1602441663927" duration="7908000" />
       <workItem from="1602674740919" duration="1997000" />
       <workItem from="1602697090351" duration="10845000" />
-      <workItem from="1602793736149" duration="1576000" />
+      <workItem from="1602793736149" duration="4750000" />
     </task>
     <servers />
   </component>

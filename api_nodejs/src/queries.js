@@ -22,8 +22,9 @@ const registerUser = async (username,email,password) => {
 
 const authUser = async (username, password) => {
     await sequelize.sync();
+    let user;
     try {
-        let user = await User.findOne({
+         user = await User.findOne({
             where:{
                 username:username
             },
@@ -31,18 +32,16 @@ const authUser = async (username, password) => {
 
         let new_hash = await bcrypt.hash(password, user.password);
         let db_hash = user.password;
-
-        if( db_hash == new_hash){
-            return (obj = {
+        if( db_hash == new_hash){ //сравниваем хеш с новым хешом
+            let jwt_obj = {
                 id: user.id,
                 login: user.login,
-                token: jwt.sign({ id: user.login }, token)
-            })
-        }else{
-            return ("Пароли не совпадают");
+                token: jwt.sign({ login: user.login }, token)
+            }
+            return(jwt_obj);
         }
     }catch(e){
-        return("Пользователь не найден");
+        throw("Проверьте правильность данных");
     }
 };
 
