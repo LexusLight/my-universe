@@ -2,6 +2,8 @@ const {Sequelize,Model} = require('sequelize');
 const sequelize = new Sequelize('sqlite://database.db');
 const {User,UserLink} = require('./models');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const token = "3g5s-1g5g-64gj-3g73";
 
 const registerUser = async (username,email,password) => {
     await sequelize.sync();
@@ -31,7 +33,11 @@ const authUser = async (username, password) => {
         let db_hash = user.password;
 
         if( db_hash == new_hash){
-            return ("Пароли совпадают");
+            return (obj = {
+                id: user.id,
+                login: user.login,
+                token: jwt.sign({ id: user.login }, token)
+            })
         }else{
             return ("Пароли не совпадают");
         }

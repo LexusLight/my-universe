@@ -17,7 +17,7 @@ const addRequests = (app) => {
     app.post('/auth', async (request, response)=>{
         let username = request.body.username;
         let password = request.body.password;
-        response.send(await authUser(username,password));
+        response.json(await authUser(username,password));
     });
 
     // app.get('/addlink', async (request, response) => {
