@@ -55,8 +55,8 @@ UserLink.init(
     { sequelize, modelName: 'user_link' }
 );
 
-class Person extends Model{}
-Person.init(
+class Person_OC extends Model{}
+Person_OC.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -91,7 +91,7 @@ Person.init(
             allowNull:true
         }
     },
-    {sequelize, modelName:'person'}
+    {sequelize, modelName:'person_oc'}
 )
 
 class PersonImage extends Model{}
@@ -116,8 +116,8 @@ PersonImage.init(
 )
 
 User.hasMany(UserLink, {onDelete: "cascade"});
-User.hasMany(Person, {onDelete: "cascade"});
-Person.hasMany(PersonImage, {onDelete:"cascade"});
+User.hasMany(Person_OC, {onDelete: "cascade"});
+Person_OC.hasMany(PersonImage, {onDelete:"cascade"});
 
 sequelize.sync();
 

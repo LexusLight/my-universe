@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import PageWrapper from "./Components/PageWrapper/PageWrapper";
+import {Provider} from "mobx-react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider>
+          <PageWrapper/>
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )

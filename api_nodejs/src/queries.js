@@ -1,15 +1,48 @@
-const {Sequelize} = require('sequelize');
+const {Sequelize,Model} = require('sequelize');
 const sequelize = new Sequelize('sqlite://database.db');
-const {User,UserLink} = require('./models')
+const {User,UserLink} = require('./models');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const token = "3g5s-1g5g-64gj-3g73";
 
-const registerUser = async (username,email) => {
+const registerUser = async (username,email,password) => {
     await sequelize.sync();
-    const user = await User.create({
-        username: username,
-        email: email,
+    let salt = await bcrypt.genSalt(10);
+    let hash_password = await bcrypt.hash(password, salt);
+    try {
+        const user = await User.create({
+            username: username,
+            email: email,
+            password: hash_password,
+        });
+    } catch (e){
+        throw ("Данный пользователь уже существует");
+    }
+};
 
-    });
-    return user;
+const authUser = async (username, password) => {
+    await sequelize.sync();
+    let user;
+    try {
+         user = await User.findOne({
+            where:{
+                username:username
+            },
+        });
+
+        let new_hash = await bcrypt.hash(password, user.password);
+        let db_hash = user.password;
+        if( db_hash == new_hash){ //сравниваем хеш с новым хешом
+            let jwt_obj = {
+                id: user.id,
+                login: user.login,
+                token: jwt.sign({ login: user.login }, token)
+            }
+            return(jwt_obj);
+        }
+    }catch(e){
+        throw("Проверьте правильность данных");
+    }
 };
 
 const addLink = async (username,url,link_name) => {
@@ -31,5 +64,6 @@ const addLink = async (username,url,link_name) => {
 
 module.exports = {
     registerUser,
+    authUser,
     addLink,
 }
