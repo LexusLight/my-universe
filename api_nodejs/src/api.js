@@ -1,12 +1,12 @@
-const {registerUser,authUser,addLink} = require('./queries')
+const {registerUser,authUser,addLink,addCharacter} = require('./queries')
 
 const addRequests = (app) => {
-    app.post('/register', async (request, response) => {
+    app.post('/api/reg', async (request, response) => {
         try {
-            let username = request.body.username;
-            let email = request.body.email;
-            let password = request.body.password;
-            let user = await registerUser(username,email,password);
+            const username = request.body.username;
+            const email = request.body.email;
+            const password = request.body.password;
+            await registerUser(username,email,password);
             response.send("Пользователь " + username + " успешно создан!");
 
         }catch (e){
@@ -14,16 +14,31 @@ const addRequests = (app) => {
         }
     });
 
-    app.post('/auth', async (request, response)=>{
-        let username = request.body.username;
-        let password = request.body.password;
+    app.post('/api/auth', async (request, response)=>{
+        const username = request.body.username;
+        const password = request.body.password;
         try{
-            let jwt_obj = await authUser(username,password)
+            const jwt_obj = await authUser(username,password)
             response.status(200).json(jwt_obj);
         }catch (e){
-            console.log(e);
             response.status(401).send(e);
         }
+    });
+
+    app.post('/api/add_character', async (request, response)=>{
+        const token = request.body.token;
+        const name = request.body.name;
+        const about = request.body.about;
+        if(token === null){
+            response.status(401).send("Неавторизованный пользователь");
+        }
+        try{
+            const character = await addCharacter(name,about,token);
+            response.status(200).send(character.name + " создан!")
+        }catch (e){
+            response.status(401).send(e);
+        }
+
     });
 
     // app.get('/addlink', async (request, response) => {

@@ -1,7 +1,5 @@
 import React from 'react';
 import {useState} from 'react'
-import logo from './logo.svg';
-import {BrowserRouter, Route} from 'react-router-dom'
 import style from './../Profile.module.css'
 
 const Reg = () => {
@@ -18,7 +16,7 @@ const Reg = () => {
             password: password,
         }
 
-        let response = await fetch('http://localhost:1337/register', {
+        let response = await fetch('http://localhost:1337/api/reg', {
             headers: {'Content-Type':'application/json'},
             mode: 'cors',
             method: 'POST',

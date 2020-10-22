@@ -20,10 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api_nodejs/src/database.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/database.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/models.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/queries.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/requests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Character/Character.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Character/Character.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Person/Person.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Person/Person.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +60,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/Profile/Auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\react\src\Components\Character" />
+      <recent name="D:\GitHub\my-universe\react\src\Store" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\react\src\Components" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Auth" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Reg" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Person" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\PageWrapper\Menu" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\react\src\Store" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -79,7 +91,8 @@
       <workItem from="1602441663927" duration="7908000" />
       <workItem from="1602674740919" duration="1997000" />
       <workItem from="1602697090351" duration="10845000" />
-      <workItem from="1602793736149" duration="4750000" />
+      <workItem from="1602793736149" duration="5044000" />
+      <workItem from="1602866282923" duration="12869000" />
     </task>
     <servers />
   </component>

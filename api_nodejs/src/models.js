@@ -1,5 +1,5 @@
-const { Sequelize, Model, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite://database.db');
+const { Model, DataTypes } = require('sequelize');
+const {sequelize} = require('./database')
 
 class User extends Model {}
 User.init(
@@ -55,8 +55,8 @@ UserLink.init(
     { sequelize, modelName: 'user_link' }
 );
 
-class Person_OC extends Model{}
-Person_OC.init(
+class Character extends Model{}
+Character.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -91,11 +91,11 @@ Person_OC.init(
             allowNull:true
         }
     },
-    {sequelize, modelName:'person_oc'}
+    {sequelize, modelName:'character'}
 )
 
-class PersonImage extends Model{}
-PersonImage.init(
+class CharacterImage extends Model{}
+CharacterImage.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -112,16 +112,15 @@ PersonImage.init(
             allowNull: true,
         },
     },
-    {sequelize, modelName:'person_image'}
+    {sequelize, modelName:'character_image'}
 )
 
 User.hasMany(UserLink, {onDelete: "cascade"});
-User.hasMany(Person_OC, {onDelete: "cascade"});
-Person_OC.hasMany(PersonImage, {onDelete:"cascade"});
-
-sequelize.sync();
+User.hasMany(Character, {onDelete: "cascade"});
+Character.hasMany(CharacterImage, {onDelete:"cascade"});
 
 module.exports = {
     User,
     UserLink,
+    Character,
 }

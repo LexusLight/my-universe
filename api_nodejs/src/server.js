@@ -1,11 +1,10 @@
-
 const path = require('path');
 const express = require('express');
 const {addRequests} = require('./requests');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../static")));
+app.use(express.static(path.join(__dirname, "../media")));
 // Запуск статического файлового сервера,
 
 app.use(express.json());

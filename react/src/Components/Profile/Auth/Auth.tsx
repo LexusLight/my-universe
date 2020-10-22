@@ -9,22 +9,30 @@ const Auth = () => {
     let [password,setPassword] = useState("password");
     let [message,setMessage] = useState("");
 
-    const addPerson = async(event:any) => {
+    const authUser = async(event:any) => {
         event.preventDefault();
-        let body = {
+        const body = {
             username: username,
             password: password,
         }
 
-        let response = await fetch('http://localhost:1337/auth', {
+        const response = await fetch('http://localhost:1337/api/auth', {
             headers: {'Content-Type':'application/json'},
             mode: 'cors',
             method: 'POST',
             body: JSON.stringify(body),
         });
-        let status = response.status;
-        let text = (status == 401) ? await response.text(): "Вы авторизованы.";
-        setMessage(text);
+        const status = response.status;
+
+        if(status != 401) {
+            const text = "Вы авторизованы."
+            setMessage(text);
+            const token = await response.json();
+            localStorage.setItem("universe_token",token.token);
+        }else{
+            const text = await response.text();
+            setMessage(text);
+        }
     }
 
     const usernameHandler = (event:any) => {
@@ -40,7 +48,7 @@ const Auth = () => {
         <div className={style.center}>
             <div>Авторизация</div>
             <br/>
-            <form onSubmit={addPerson}>
+            <form onSubmit={authUser}>
                 <div color={"red"}>{message}</div>
                 <br/>
                 <input type="text" value={username} onChange={usernameHandler}/>
