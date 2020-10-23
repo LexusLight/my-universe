@@ -26,13 +26,16 @@ const authUser = async (username, password) => {
     if(user === null){
         throw ("Пользователя не существует");
     }
-
     const new_hash = await bcrypt.hash(password, user.password)
+
     if(user.password === new_hash){ //сравниваем хеш с новым хешом
-        let jwt_obj = {
-            token: jwt.sign({ id: user.id, username: user.username }, tokenkey)
+        const token = jwt.sign({ id: user.id, username: user.username }, tokenkey);
+
+        const auth_obj = {
+            username: user.username,
+            token: token,
         }
-        return(jwt_obj);
+        return(auth_obj);
     }else{
         throw ("Пароль введён неверно");
     }

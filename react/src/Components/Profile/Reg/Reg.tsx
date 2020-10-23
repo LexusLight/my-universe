@@ -6,17 +6,18 @@ const Reg = () => {
     let [username,setUsername] = useState("username");
     let [email,setEmail] = useState("email");
     let [password,setPassword] = useState("password");
+    // let [file,setFile] = useState();
     let [message,setMessage] = useState("");
 
     const addPerson = async(event:any) => {
         event.preventDefault();
-        let body = {
+        const body = {
             username: username,
-            email: email,
             password: password,
+            email: email
         }
 
-        let response = await fetch('http://localhost:1337/api/reg', {
+        const response = await fetch('http://localhost:1337/api/reg', {
             headers: {'Content-Type':'application/json'},
             mode: 'cors',
             method: 'POST',
@@ -35,6 +36,9 @@ const Reg = () => {
     const passwordHandler = (event:any) => {
         setPassword(event.target.value);
     }
+    // const imageHandler = (event:any) => {
+    //     setFile(event.target.files[0]);
+    // }
 
 
 
@@ -47,7 +51,7 @@ const Reg = () => {
                 <br/>
                 <input type="text" value={username} onChange={usernameHandler}/>
                 <br/>
-                <input type="file"/>
+                <input type="file" onChange={()=>{}} />
                 <br/>
                 <input type="email" value={email} onChange={emailHandler}/>
                 <br/>

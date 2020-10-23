@@ -6,6 +6,7 @@ const addRequests = (app) => {
             const username = request.body.username;
             const email = request.body.email;
             const password = request.body.password;
+            // const img_url = request.fi
             await registerUser(username,email,password);
             response.send("Пользователь " + username + " успешно создан!");
 
@@ -18,11 +19,22 @@ const addRequests = (app) => {
         const username = request.body.username;
         const password = request.body.password;
         try{
-            const jwt_obj = await authUser(username,password)
-            response.status(200).json(jwt_obj);
+            const auth_obj = await authUser(username,password)
+            response.status(200).json(auth_obj);
         }catch (e){
             response.status(401).send(e);
         }
+    });
+
+    app.post('/api/file', async (request,response) => {
+        const file = request.files.file;
+        await file.mv(`${__dirname}/../media/${file.name}`, error => {
+            if (error) {
+                console.error(error);
+                return response.status(500).send(error);
+            }
+            response.json({filename: file.name, filePath: `media/${file.name}`});
+        });
     });
 
     app.post('/api/add_character', async (request, response)=>{
