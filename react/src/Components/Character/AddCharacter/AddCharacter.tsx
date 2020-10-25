@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import style from './AddCharacter.module.css'
+import axios from 'axios'
 
 const AddCharacter = () => {
     let [message,setMessage] = useState("");
@@ -9,19 +10,14 @@ const AddCharacter = () => {
     const addCharacter = async(event:any) => {
         event.preventDefault();
         let token = localStorage.getItem("universe_token");
-        let body = {
-            name: name,
-            about: about,
-            token: token,
-        };
+        token = (token == null) ? 'nothing': token;
+        let data = new FormData();
+        data.append('name',name);
+        data.append('about',about);
+        data.append('token',token);
 
-        let response = await fetch('http://localhost:1337/api/add_character', {
-            headers: {'Content-Type':'application/json'},
-            mode: 'cors',
-            method: 'POST',
-            body: JSON.stringify(body),
-        });
-        let text = await response.text();
+        const response = await axios.post('http://localhost:1337/api/add_character', data);
+        const text = await response.data;
         setMessage(text);
     }
 

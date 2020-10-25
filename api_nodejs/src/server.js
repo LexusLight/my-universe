@@ -1,7 +1,8 @@
 const path = require('path');
 const express = require('express');
-const fileUpload = require('express-fileupload')
-const {addRequests} = require('./requests');
+const fileUpload = require('express-fileupload');
+const {apiUser} = require('./api/api_user');
+const {apiCharacter} = require('./api/api_character');
 
 const app = express();
 
@@ -18,7 +19,8 @@ app.use((request, response, next) => {
 });
 // Решаем Cors
 
-addRequests(app);
+apiUser(app);
+apiCharacter(app);
 
 app.listen(1337, () => {
     console.log("Слушаю порт 1337....")

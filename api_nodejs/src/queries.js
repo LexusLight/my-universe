@@ -3,17 +3,18 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const tokenkey = "3g5s-1g5g-64gj-3g73";
 
-const registerUser = async (username,email,password) => {
+const registerUser = async (username,email,password,img_url) => {
     let salt = await bcrypt.genSalt(10);
     let hash_password = await bcrypt.hash(password, salt);
     try {
-        const user = await User.create({
+        await User.create({
             username: username,
             email: email,
             password: hash_password,
+            img_url: img_url,
         });
     } catch (e){
-        throw ("Данный пользователь уже существует");
+        throw ("Имя пользователя или почта уже существуют.");
     }
 };
 
@@ -62,19 +63,26 @@ const addCharacter = async (name, about, token) => {
 
 };
 
-const addLink = async (username,url,link_name) => {
+const addLink = async (username,url,link_name,token) => {
+    const token_obj = jwt.decode(token,tokenkey);
+
     let user = await User.findOne(
         {where:{
-            username:username
+            id: token_obj.id,
+            username: token_obj.username,
             },
         });
 
-    const link = await UserLink.create({
-        url: url,
-        link_name: link_name,
-        userId: user.id,
-    });
-    return link;
+    if(user === null){
+        throw("Невалидный токен")
+    }else {
+        const link = await UserLink.create({
+            url: url,
+            link_name: link_name,
+            userId: user.id,
+        });
+        return link;
+    }
 };
 
 module.exports = {

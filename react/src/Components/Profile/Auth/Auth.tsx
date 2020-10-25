@@ -3,6 +3,7 @@ import {useState} from 'react'
 import logo from './logo.svg';
 import {BrowserRouter, Route} from 'react-router-dom'
 import style from './../Profile.module.css'
+import axios from 'axios'
 
 const Auth = () => {
     let [username,setUsername] = useState("username");
@@ -11,26 +12,20 @@ const Auth = () => {
 
     const authUser = async(event:any) => {
         event.preventDefault();
-        const body = {
-            username: username,
-            password: password,
-        }
+        let data = new FormData();
+        data.append('password',password);
+        data.append('username',username);
 
-        const response = await fetch('http://localhost:1337/api/auth', {
-            headers: {'Content-Type':'application/json'},
-            mode: 'cors',
-            method: 'POST',
-            body: JSON.stringify(body),
-        });
+        const response = await axios.post('http://localhost:1337/api/auth',data);
         const status = response.status;
 
         if(status != 401) {
             const text = "Вы авторизованы."
             setMessage(text);
-            const token = await response.json();
-            localStorage.setItem("universe_token",token.token);
+            const token = await response.data.token;
+            localStorage.setItem("universe_token",token);
         }else{
-            const text = await response.text();
+            const text = await response.data;
             setMessage(text);
         }
     }

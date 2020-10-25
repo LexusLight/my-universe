@@ -20,21 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/8acea9261c892e75b0651de1d4f4e0e1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/migrations/20201022190315-change_fields_name.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/migrations/20201023152138-change_fields_name2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/File/File.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/src/api/api_character.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/requests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/media/8acea9261c892e75b0651de1d4f4e0e1.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/queries.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/api/api_user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/Либы" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/Либы" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,24 +62,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/Profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_nodejs/src/api" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
+      <recent name="D:\GitHub\my-universe\api_nodejs" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\Character" />
+      <recent name="D:\GitHub\my-universe\react\src\Store" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
       <recent name="D:\GitHub\my-universe\react\src\Components" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Auth" />
       <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Reg" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Person" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\api_nodejs" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Character" />
-      <recent name="D:\GitHub\my-universe\react\src\Store" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,6 +100,7 @@
       <workItem from="1602866282923" duration="12869000" />
       <workItem from="1603386350292" duration="9302000" />
       <workItem from="1603466375949" duration="13453000" />
+      <workItem from="1603646029097" duration="10505000" />
     </task>
     <servers />
   </component>
@@ -140,9 +139,9 @@
       <screen x="63" y="0" width="1473" height="864" />
     </state>
     <state x="457" y="197" key="run.anything.popup/63.0.1473.864@63.0.1473.864" timestamp="1602702944199" />
-    <state x="830" y="626" width="672" height="232" key="search.everywhere.popup" timestamp="1603482014132">
+    <state x="830" y="626" width="672" height="232" key="search.everywhere.popup" timestamp="1603656651196">
       <screen x="63" y="0" width="1473" height="864" />
     </state>
-    <state x="830" y="626" width="672" height="232" key="search.everywhere.popup/63.0.1473.864@63.0.1473.864" timestamp="1603482014132" />
+    <state x="830" y="626" width="672" height="232" key="search.everywhere.popup/63.0.1473.864@63.0.1473.864" timestamp="1603656651196" />
   </component>
 </project>

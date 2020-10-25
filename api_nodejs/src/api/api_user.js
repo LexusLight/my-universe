@@ -1,15 +1,18 @@
-const {registerUser,authUser,addLink,addCharacter} = require('./queries')
+const {registerUser,authUser,addLink} = require('../queries')
 
-const addRequests = (app) => {
+const apiUser = (app) => {
     app.post('/api/reg', async (request, response) => {
         try {
             const username = request.body.username;
             const email = request.body.email;
             const password = request.body.password;
-            // const img_url = request.fi
-            await registerUser(username,email,password);
-            response.send("Пользователь " + username + " успешно создан!");
+            const image = request.files.image; //последнее свойство как название файла
+            const img_url = image.name;
 
+            await registerUser(username,email,password,img_url);
+
+            await image.mv(`${__dirname}/../media/avatars/${image.name}`);
+            response.send("Пользователь " + username + " успешно создан!");
         }catch (e){
             response.send("Что-то пошло не так.... "+e.toString());
         }
@@ -37,43 +40,25 @@ const addRequests = (app) => {
         });
     });
 
-    app.post('/api/add_character', async (request, response)=>{
-        const token = request.body.token;
-        const name = request.body.name;
-        const about = request.body.about;
+    app.post('api/add_link', async (request, response) => {
+        let username = request.body.username;
+        let url = request.body.url;
+        let link_name = request.body.link_name;
+        let token = request.body.token;
         if(token === null){
-            response.status(401).send("Неавторизованный пользователь");
+            request.status(401).send("Ошибка авторизации");
         }
-        try{
-            const character = await addCharacter(name,about,token);
-            response.status(200).send(character.name + " создан!")
+        try {
+            let link = await addLink(username,url,link_name,token);
+            response.send("Привязана ссылка "+link.link_name);
         }catch (e){
             response.status(401).send(e);
         }
-
     });
-
-    // app.get('/addlink', async (request, response) => {
-    //     try{
-    //         let username = request.query.username;
-    //         let url = request.query.url;
-    //         let link_name = request.query.link_name;
-    //         let link = await addLink(username,url,link_name);
-    //         response.send("Привязана ссылка "+link.link_name);
-    //     }catch (e){
-    //         response.send("Ошибка!");
-    //     }
-    // });
-    //
-    // app.get('/proverka', (request, response) => {
-    //     let obj = {aaaa:'aaaaa'};
-    //     response.json(obj);
-    //     console.log("WOW");
-    // });
 }
 
 module.exports = {
-    addRequests,
+    apiUser,
 }
 
 
