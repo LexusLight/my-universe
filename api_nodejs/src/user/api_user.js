@@ -1,4 +1,4 @@
-const {registerUser,authUser,addLink} = require('../queries')
+const {registerUser,authUser,addLink} = require('./query_user')
 
 const apiUser = (app) => {
     app.post('/api/reg', async (request, response) => {
@@ -40,7 +40,7 @@ const apiUser = (app) => {
         });
     });
 
-    app.post('api/add_link', async (request, response) => {
+    app.post('/api/add_link', async (request, response) => {
         let username = request.body.username;
         let url = request.body.url;
         let link_name = request.body.link_name;
@@ -75,7 +75,7 @@ module.exports = {
 // });
 //
 //
-// app.get('/api', function (req, res) {
+// app.get('/user', function (req, res) {
 //     res.send("Бла бла бла бла бла");
 // });
 //

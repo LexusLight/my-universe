@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35679adb-1f2f-4804-94cd-844fd50d5f3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/queries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/character/query_character.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/api_character.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/api_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/query_user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Либы" beforeDir="false" afterPath="$PROJECT_DIR$/Либы" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/File/File.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../react/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../react/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +88,7 @@
       <workItem from="1601405843197" duration="7899000" />
       <workItem from="1601465719668" duration="1207000" />
       <workItem from="1601645975797" duration="15456000" />
+      <workItem from="1603742500692" duration="1521000" />
     </task>
     <task id="LOCAL-00001" summary="giugiu">
       <created>1600853440524</created>

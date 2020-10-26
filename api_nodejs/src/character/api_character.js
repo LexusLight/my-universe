@@ -1,4 +1,4 @@
-const {addCharacter} = require('../queries')
+const {addCharacter,characterList} = require('./query_character');
 
 const apiCharacter = (app) => {
 
@@ -11,10 +11,16 @@ const apiCharacter = (app) => {
         }
         try{
             const character = await addCharacter(name,about,token);
-            response.send(character.name + " создан!")
+            response.send(character.name + " создан!");
         }catch (e){
             response.status(401).send(e);
         }
+    });
+
+    app.get('/api/character_list', async (request, response)=>{
+        const username = request.query.username;
+        const characters = await characterList(username);
+        response.json(characters);
     });
 }
 
@@ -36,7 +42,7 @@ module.exports = {
 // });
 //
 //
-// app.get('/api', function (req, res) {
+// app.get('/user', function (req, res) {
 //     res.send("Бла бла бла бла бла");
 // });
 //

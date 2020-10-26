@@ -1,8 +1,8 @@
 const path = require('path');
 const express = require('express');
 const fileUpload = require('express-fileupload');
-const {apiUser} = require('./api/api_user');
-const {apiCharacter} = require('./api/api_character');
+const {apiUser} = require('./user/api_user');
+const {apiCharacter} = require('./character/api_character');
 
 const app = express();
 
