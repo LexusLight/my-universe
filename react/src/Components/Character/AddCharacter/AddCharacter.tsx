@@ -18,9 +18,13 @@ const AddCharacter = () => {
         data.append('about',about);
         data.append('token',token);
         data.append('image',image,uuidv4()+'.png');
-
-        const response = await axios.post('http://localhost:1337/api/add_character', data);
-        const text = await response.data;
+        let text:string;
+        try{
+            const response = await axios.post('http://localhost:1337/api/add_character', data);
+            text = await response.data;
+        }catch(error){
+            text = await error.response.data;
+        }
         setMessage(text);
     }
 

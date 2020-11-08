@@ -1,4 +1,5 @@
-const {addCharacter,characterList} = require('./query_character');
+const {addCharacter,characterList,imageCharacter} = require('./query_character');
+const path = require('path');
 
 const apiCharacter = (app) => {
 
@@ -25,6 +26,12 @@ const apiCharacter = (app) => {
         const characters = await characterList(username);
         response.json(characters);
     });
+
+    app.get('/api/character_avatar', async (request, response) =>{
+        const id = request.query.id;
+        const img_url = await imageCharacter(id);
+        response.sendfile(path.resolve(`${__dirname}/../../media/character_avatars/${img_url}`));
+    })
 }
 
 module.exports = {

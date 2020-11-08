@@ -39,14 +39,17 @@ const characterList = async(username) => {
     return characters;
 }
 
-const imageCharacter = async(name) => {
+const imageCharacter = async(id) => {
     const character = await Character.findOne({
         where:{
-            name: name,
+            id: id,
         }
     });
+    const img_url = character.img_url;
+    return(img_url);
 }
 module.exports = {
     addCharacter,
-    characterList
+    characterList,
+    imageCharacter,
 }
