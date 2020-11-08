@@ -16,11 +16,19 @@ const Auth = () => {
         data.append('password',password);
         data.append('username',username);
 
-        const response = await axios.post('http://localhost:1337/api/auth',data);
-        const status = response.status;
+        let response:any;
+        let status:number;
+
+        try{
+            response = await axios.post('http://localhost:1337/api/auth', data);
+            status = response.status;
+        }catch(error){
+            status = error.response.status;
+            response = error.response;
+        }
 
         if(status != 401) {
-            const text = "Вы авторизованы."
+            const text = "Вы авторизованы.";
             setMessage(text);
             const token = await response.data.token;
             localStorage.setItem("universe_token",token);

@@ -6,11 +6,14 @@ const apiCharacter = (app) => {
         const token = request.body.token;
         const name = request.body.name;
         const about = request.body.about;
+        const image = request.files.image;
+        const img_url = image.name;
         if(token === null){
             response.status(401).send("Ошибка авторизации");
         }
         try{
-            const character = await addCharacter(name,about,token);
+            const character = await addCharacter(name,img_url,about,token);
+            await image.mv(`${__dirname}/../../media/character_avatars/${img_url}`);
             response.send(character.name + " создан!");
         }catch (e){
             response.status(401).send(e);

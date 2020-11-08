@@ -11,7 +11,7 @@ const apiUser = (app) => {
 
             await registerUser(username,email,password,img_url);
 
-            await image.mv(`${__dirname}/../media/avatars/${image.name}`);
+            await image.mv(`${__dirname}/../../media/avatars/${img_url}`);
             response.send("Пользователь " + username + " успешно создан!");
         }catch (e){
             response.send("Что-то пошло не так.... "+e.toString());

@@ -8,11 +8,11 @@ interface props{
 }
 
 const Test = observer((props:props) => {
-    let[characters,setCharacters] = useState([]);
+    let[characters,setCharacters] = useState('');
 
     const rendCharacters = async() => {
-        setCharacters(await props.store.getCharacters());
-        let block = characters.map((el)=>{return(<div>el</div>)})
+        setCharacters(JSON.stringify(await props.store.getCharacters()));
+        // characters.map((el)=>{return(<div>el</div>)});
     }
 
     return(

@@ -21,8 +21,12 @@ const Reg = () => {
             data.append('email',email);
             data.append('password',password);
             data.append('image',image,uuidv4()+'.png');
-            const  response = await axios.post('http://localhost:1337/api/reg',data);
-            text = response.data;
+            try{
+                const  response = await axios.post('http://localhost:1337/api/reg',data);
+                text = response.data;
+            }catch(error) {
+                text = error.response.data;
+            }
         }
         setMessage(text);
     }

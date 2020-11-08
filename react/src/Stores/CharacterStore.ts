@@ -11,8 +11,9 @@ class CharacterStore{
         makeAutoObservable(this)
     }
 
-    getCharacters = async () => {
-        let response = await axios.get('127.0.0.1:1337/api/character_list')
+    getCharacters = async (username:string = 'sas') => {
+        let url = `http://127.0.0.1:1337/api/character_list?username=${username}`;
+        let response = await axios.get(url);
         this.character_list = await response.data;
         return this.character_list;
     }
