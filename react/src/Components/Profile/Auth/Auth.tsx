@@ -3,28 +3,39 @@ import {useState} from 'react'
 import logo from './logo.svg';
 import {BrowserRouter, Route} from 'react-router-dom'
 import style from './../Profile.module.css'
+import axios from 'axios'
 
 const Auth = () => {
     let [username,setUsername] = useState("username");
     let [password,setPassword] = useState("password");
     let [message,setMessage] = useState("");
 
-    const addPerson = async(event:any) => {
+    const authUser = async(event:any) => {
         event.preventDefault();
-        let body = {
-            username: username,
-            password: password,
+        let data = new FormData();
+        data.append('password',password);
+        data.append('username',username);
+
+        let response:any;
+        let status:number;
+
+        try{
+            response = await axios.post('http://localhost:1337/api/auth', data);
+            status = response.status;
+        }catch(error){
+            status = error.response.status;
+            response = error.response;
         }
 
-        let response = await fetch('http://localhost:1337/auth', {
-            headers: {'Content-Type':'application/json'},
-            mode: 'cors',
-            method: 'POST',
-            body: JSON.stringify(body),
-        });
-        let status = response.status;
-        let text = (status == 401) ? await response.text(): "Вы авторизованы.";
-        setMessage(text);
+        if(status != 401) {
+            const text = "Вы авторизованы.";
+            setMessage(text);
+            const token = await response.data.token;
+            localStorage.setItem("universe_token",token);
+        }else{
+            const text = await response.data;
+            setMessage(text);
+        }
     }
 
     const usernameHandler = (event:any) => {
@@ -40,7 +51,7 @@ const Auth = () => {
         <div className={style.center}>
             <div>Авторизация</div>
             <br/>
-            <form onSubmit={addPerson}>
+            <form onSubmit={authUser}>
                 <div color={"red"}>{message}</div>
                 <br/>
                 <input type="text" value={username} onChange={usernameHandler}/>
