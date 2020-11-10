@@ -32,6 +32,8 @@ const apiCharacter = (app) => {
         const img_url = await imageCharacter(id);
         response.sendfile(path.resolve(`${__dirname}/../../media/character_avatars/${img_url}`));
     })
+
+
 }
 
 module.exports = {

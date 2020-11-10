@@ -8,17 +8,29 @@ interface props{
 }
 
 const Test = observer((props:props) => {
-    let[characters,setCharacters] = useState('');
+    let[characters,setCharacters] = useState<any[]>([]);
 
-    const rendCharacters = async() => {
-        setCharacters(JSON.stringify(await props.store.getCharacters()));
+    const uploadCharacters = async() => {
+        setCharacters(await props.store.getCharacters());
         // characters.map((el)=>{return(<div>el</div>)});
+    }
+
+    const rendCards = () => {
+        return(characters.map((el)=>{
+            return(
+                <div>
+                    <div>{el.name}</div>
+                    <img src={'127.0.0.1:1337/api/character_avatar?id='+el.id} />
+                    <br/>
+                </div>
+            )
+        }));
     }
 
     return(
         <div>
-            <button onClick={rendCharacters}>Load characters</button>
-            {characters}
+            <button onClick={uploadCharacters}>Load characters</button>
+            {rendCards()}
         </div>
     );
 

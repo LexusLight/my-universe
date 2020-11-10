@@ -34,7 +34,7 @@ const characterList = async(username) => {
         where:{
             userId: user.id,
         },
-        attributes: ['id','name','age','gender','about']
+        attributes: ['id','name','age','gender','about','img_url']
     });
     return characters;
 }
