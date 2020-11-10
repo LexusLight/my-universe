@@ -16,11 +16,11 @@ const Test = observer((props:props) => {
     }
 
     const rendCards = () => {
-        return(characters.map((el)=>{
+        return(characters.map((el,index)=>{
             return(
-                <div>
+                <div key={index}>
                     <div>{el.name}</div>
-                    <img src={'127.0.0.1:1337/api/character_avatar?id='+el.id} />
+                    <img src={'https://127.0.0.1:1337'+el.img_url} alt={'Картинка'} />
                     <br/>
                 </div>
             )

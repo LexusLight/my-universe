@@ -21,10 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="35679adb-1f2f-4804-94cd-844fd50d5f3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/database.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/character/api_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/api_character.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/character/query_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/character/query_character.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../react/src/Components/Profile/Test/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Components/Profile/Test/Test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../react/src/Stores/CharacterStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../react/src/Stores/CharacterStore.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +87,7 @@
       <workItem from="1604860229744" duration="4842000" />
       <workItem from="1604872179019" duration="3727000" />
       <workItem from="1604990621334" duration="4236000" />
+      <workItem from="1605034699192" duration="2356000" />
     </task>
     <task id="LOCAL-00001" summary="giugiu">
       <created>1600853440524</created>
