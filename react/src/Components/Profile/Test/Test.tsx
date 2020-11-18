@@ -20,7 +20,7 @@ const Test = observer((props:props) => {
             return(
                 <div key={index}>
                     <div>{el.name}</div>
-                    <img src={'https://127.0.0.1:1337'+el.img_url} alt={'Картинка'} />
+                    <img src={'http://127.0.0.1:1337'+el.img_url} alt={'Картинка'} />
                     <br/>
                 </div>
             )
