@@ -1,9 +1,8 @@
 const {User,UserLink} = require('../models');
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const tokenkey = "3g5s-1g5g-64gj-3g73";
+const {tokenDecode,tokenSign} = require('./webtoken');
 
-const registerUser = async (username,email,password,img_url) => {
+const registerUser = async (username,email,password,img_url) => { //Регистрация профиля
     let salt = await bcrypt.genSalt(10);
     let hash_password = await bcrypt.hash(password, salt);
     try {
@@ -18,7 +17,7 @@ const registerUser = async (username,email,password,img_url) => {
     }
 };
 
-const authUser = async (username, password) => {
+const authUser = async (username, password) => { //Авторизация юзера
     const user = await User.findOne({
             where:{
                 username:username
@@ -30,7 +29,7 @@ const authUser = async (username, password) => {
     const new_hash = await bcrypt.hash(password, user.password)
 
     if(user.password === new_hash){ //сравниваем хеш с новым хешом
-        const token = jwt.sign({ id: user.id, username: user.username }, tokenkey);
+        const token = tokenSign({ id: user.id, username: user.username });
 
         const auth_obj = {
             username: user.username,
@@ -42,16 +41,34 @@ const authUser = async (username, password) => {
     }
 };
 
-const addLink = async (username,url,link_name,token) => {
-    const token_obj = jwt.decode(token,tokenkey);
+const editUser = async(username,password,token) => { //Редактирование профиля
+    const token_obj = tokenDecode(token);
+    let salt = await bcrypt.genSalt(10);
+    let hash_password = await bcrypt.hash(password, salt);
+    let user = await User.findOne({
+        where:{
+            id: token_obj.id,
+            username: token_obj.username,
+        },
+    });
+    if(user === null){
+        throw('Невалидный токен');
+    }else{
+        await user.update({
+            username: username,
+            password: hash_password,
+        });
+    }
+}
 
+const addLink = async (username,url,link_name,token) => { //Добавление линка
+    const token_obj = tokenDecode(token);
     let user = await User.findOne(
         {where:{
             id: token_obj.id,
             username: token_obj.username,
             },
         });
-
     if(user === null){
         throw("Невалидный токен")
     }else {
@@ -67,5 +84,6 @@ const addLink = async (username,url,link_name,token) => {
 module.exports = {
     registerUser,
     authUser,
+    editUser,
     addLink,
 }

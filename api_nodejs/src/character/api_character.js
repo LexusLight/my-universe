@@ -3,7 +3,7 @@ const path = require('path');
 
 const apiCharacter = (app) => {
 
-    app.post('/api/add_character', async (request, response)=>{
+    app.post('/api/add_character', async (request, response)=>{ //Добавить персонажа
         const token = request.body.token;
         const name = request.body.name;
         const about = request.body.about;
@@ -21,7 +21,7 @@ const apiCharacter = (app) => {
         }
     });
 
-    app.post('/api/edit_character',async(request,response)=>{
+    app.post('/api/edit_character',async(request,response)=>{ //Редактировать персонажа
         const token = request.body.token;
         const name = request.body.name;
         const about = request.body.about;
@@ -40,7 +40,7 @@ const apiCharacter = (app) => {
 
     })
 
-    app.get('/api/character_list', async (request, response)=>{
+    app.get('/api/character_list', async (request, response)=>{ //Список персонажей по юзеру
         const username = request.query.username;
         const characters = await characterList(username);
         response.json(characters);
@@ -51,16 +51,11 @@ const apiCharacter = (app) => {
     //     const img_url = await imageCharacter(id);
     //     response.sendfile(path.resolve(`${__dirname}/../../media/character_avatars/${img_url}`));
     // })
-
-
 }
 
 module.exports = {
     apiCharacter,
 }
-
-
-
 
 
 // app.get('/redirect', (request, response) => {
