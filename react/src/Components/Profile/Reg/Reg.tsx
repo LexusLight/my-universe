@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
 import style from './../Profile.module.css'
+import {Box, Button, TextField} from "@material-ui/core";
+import {PhotoCamera} from "@material-ui/icons";
+
 
 const Reg = () => {
-    let [username,setUsername] = useState("username");
-    let [email,setEmail] = useState("email");
-    let [password,setPassword] = useState("password");
-    let [password2,setPassword2] = useState("password");
+    let [username,setUsername] = useState("");
+    let [email,setEmail] = useState(" ");
+    let [password,setPassword] = useState("");
+    let [password2,setPassword2] = useState("");
     let [image,setImage] = useState('');
     let [message,setMessage] = useState("");
 
@@ -54,17 +57,32 @@ const Reg = () => {
             <form onSubmit={addPerson}>
                 <div color={"red"}>{message}</div>
                 <br/>
-                <input type="text" value={username} onChange={usernameHandler} required/>
+                <TextField type="text" variant="filled" label="@username" value={username} onChange={usernameHandler} required/>
                 <br/>
-                <input type="file" onChange={imageHandler} required/>
+                <Box>
+                    <input
+                        id="avatar-input"
+                        accept="image/*"
+                        style={{ display: 'none' }}
+                        type="file"
+                        onChange={imageHandler}
+                    />
+                    <label htmlFor="avatar-input" >
+                        <Button color="default"
+                                variant="contained"
+                                component="span">
+                            <PhotoCamera/>
+                        </Button>
+                    </label>
+                </Box>
                 <br/>
-                <input type="email" value={email} onChange={emailHandler} required/>
+                <TextField type="email" variant="filled" label="email" value={email} onChange={emailHandler} required/>
                 <br/>
-                <input type="password" value={password} onChange={passwordHandler} required/>
+                <TextField type="password" variant="filled" label="password" value={password} onChange={passwordHandler} required/>
                 <br/>
-                <input type="password" value={password2} onChange={password2Handler} required/>
+                <TextField type="password" variant="filled" label="password"value={password2} onChange={password2Handler} required/>
                 <br/>
-                <button> Отправить </button>
+                <Button color="default" variant="outlined"> Отправить </Button>
             </form>
         </div>
     );
