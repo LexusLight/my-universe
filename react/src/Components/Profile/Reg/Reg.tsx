@@ -2,12 +2,26 @@ import React, {useRef} from 'react'
 import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
-import style from './../Profile.module.css'
-import {Box, Button, TextField} from "@material-ui/core";
+//import style from './../Profile.module.css'
+import {Box, Button, TextField, makeStyles} from "@material-ui/core";
 import {PhotoCamera} from "@material-ui/icons";
 
 
+const useStyles = makeStyles({
+    avtarCircle:{
+        height:100,
+        width:100,
+        //marginTop:10,
+        borderRadius:50,
+    },
+    formInput:{
+        width: '51%',
+        maxWidth: 400,
+    },
+})
+
 const Reg = () => {
+    const styles = useStyles();
     let [username,setUsername] = useState("");
     let [email,setEmail] = useState(" ");
     let [password,setPassword] = useState("");
@@ -51,14 +65,11 @@ const Reg = () => {
     }
 
     return (
-        <div className={style.center}>
-            <div>Регистрация</div>
+        <div>
+            <Box>Регистрация</Box>
             <br/>
             <form onSubmit={addPerson}>
                 <div color={"red"}>{message}</div>
-                <br/>
-                <TextField type="text" variant="filled" label="@username" value={username} onChange={usernameHandler} required/>
-                <br/>
                 <Box>
                     <input
                         id="avatar-input"
@@ -68,21 +79,23 @@ const Reg = () => {
                         onChange={imageHandler}
                     />
                     <label htmlFor="avatar-input" >
-                        <Button color="default"
+                        <Button color="default" className={styles.avtarCircle}
                                 variant="contained"
                                 component="span">
-                            <PhotoCamera/>
+                            <PhotoCamera  />
                         </Button>
                     </label>
                 </Box>
                 <br/>
-                <TextField type="email" variant="filled" label="email" value={email} onChange={emailHandler} required/>
+                <TextField className={styles.formInput} type="text" variant="filled" label="@username" value={username} onChange={usernameHandler} required/>
                 <br/>
-                <TextField type="password" variant="filled" label="password" value={password} onChange={passwordHandler} required/>
+                <TextField className={styles.formInput} type="email" variant="filled" label="email" value={email} onChange={emailHandler} required/>
                 <br/>
-                <TextField type="password" variant="filled" label="password"value={password2} onChange={password2Handler} required/>
+                <TextField className={styles.formInput} type="password" variant="filled" label="password" value={password} onChange={passwordHandler} required/>
                 <br/>
-                <Button color="default" variant="outlined"> Отправить </Button>
+                <TextField className={styles.formInput} type="password" variant="filled" label="password"value={password2} onChange={password2Handler} required/>
+                <br/>
+                <Button color="primary" variant="outlined"> Отправить </Button>
             </form>
         </div>
     );
