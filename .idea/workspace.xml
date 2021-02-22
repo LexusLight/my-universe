@@ -20,16 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_nodejs/src/character/query_character.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Stores/character_store" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/src/test_api/api_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/src/test_api/query_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/StateComponentTest/State.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/StateComponentTest/StateComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/api/api_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/character/api_character.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/api/api_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/queries.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/models.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -59,26 +60,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_nodejs/src/queries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_nodejs/src/test_api" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
+      <recent name="D:\GitHub\my-universe\react\src\Components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\my-universe\api_nodejs\src\character" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\user" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
       <recent name="D:\GitHub\my-universe\api_nodejs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
-      <recent name="D:\GitHub\my-universe\react\src\Components" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Auth" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -100,6 +101,7 @@
       <workItem from="1603466375949" duration="13453000" />
       <workItem from="1603646029097" duration="14370000" />
       <workItem from="1603738118281" duration="3542000" />
+      <workItem from="1614005297021" duration="13096000" />
     </task>
     <servers />
   </component>
@@ -122,25 +124,13 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="908" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603739302836">
-      <screen x="63" y="0" width="1473" height="864" />
+    <state x="308" y="76" key="SettingsEditor" timestamp="1614014951181">
+      <screen x="64" y="0" width="1472" height="864" />
     </state>
-    <state x="908" y="234" key="#com.intellij.fileTypes.FileTypeChooser/63.0.1473.864@63.0.1473.864" timestamp="1603739302836" />
-    <state x="553" y="79" key="SettingsEditor" timestamp="1603397374507">
-      <screen x="63" y="0" width="1473" height="864" />
+    <state x="308" y="76" key="SettingsEditor/64.0.1472.864@64.0.1472.864" timestamp="1614014951181" />
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1614008922260">
+      <screen x="64" y="0" width="1472" height="864" />
     </state>
-    <state x="553" y="79" key="SettingsEditor/63.0.1473.864@63.0.1473.864" timestamp="1603397374507" />
-    <state x="510" y="16" width="579" height="831" key="find.popup" timestamp="1603386394209">
-      <screen x="63" y="0" width="1473" height="864" />
-    </state>
-    <state x="510" y="16" width="579" height="831" key="find.popup/63.0.1473.864@63.0.1473.864" timestamp="1603386394209" />
-    <state x="457" y="197" key="run.anything.popup" timestamp="1602702944199">
-      <screen x="63" y="0" width="1473" height="864" />
-    </state>
-    <state x="457" y="197" key="run.anything.popup/63.0.1473.864@63.0.1473.864" timestamp="1602702944199" />
-    <state x="830" y="626" width="672" height="232" key="search.everywhere.popup" timestamp="1603656651196">
-      <screen x="63" y="0" width="1473" height="864" />
-    </state>
-    <state x="830" y="626" width="672" height="232" key="search.everywhere.popup/63.0.1473.864@63.0.1473.864" timestamp="1603656651196" />
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864@64.0.1472.864" timestamp="1614008922260" />
   </component>
 </project>

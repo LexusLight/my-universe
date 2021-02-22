@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const fileUpload = require('express-fileupload');
+const {apiTest} = require("./test_api/api_test");
 const {apiUser} = require('./user/api_user');
 const {apiCharacter} = require('./character/api_character');
 
@@ -21,6 +22,7 @@ app.use((request, response, next) => {
 
 apiUser(app);
 apiCharacter(app);
+apiTest(app);
 
 app.listen(1337, () => {
     console.log("Слушаю порт 1337....")

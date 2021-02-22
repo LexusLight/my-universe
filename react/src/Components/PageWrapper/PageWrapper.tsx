@@ -8,6 +8,7 @@ import Character from "../Character/Character";
 import {AppBar, Box, Button, Container, IconButton,Toolbar, Typography} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/List';
 import {makeStyles} from "@material-ui/core/styles";
+import StateComponent from "../../StateComponentTest/StateComponent";
 
 const useStyles = makeStyles((theme) => ({
     root:{
@@ -27,8 +28,8 @@ const PageWrapper = () => {
 
     return (
         <BrowserRouter>
-            <AppBar position="fixed">
-                <Container fixed>
+            <Box>
+                <AppBar position="fixed">
                     <Toolbar>
                         <IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
                             <MenuIcon/>
@@ -43,14 +44,18 @@ const PageWrapper = () => {
                             <Button color="secondary" variant="contained" >Sign Up</Button>
                         </Link>
                     </Toolbar>
-                </Container>
-            </AppBar>
+                </AppBar>
+                <Toolbar/>
+            </Box>
+
+
             <br/>
             <Switch>
                 <Route path={'/profile'}><Profile/></Route>
                 <Route path={'/world'}><World/></Route>
                 <Route path={'/character'}><Character/></Route>
             </Switch>
+            <StateComponent url={"http://localhost:1337/api/testList"}/>
         </BrowserRouter>
 
     );
