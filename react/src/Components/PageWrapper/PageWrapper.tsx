@@ -5,13 +5,25 @@ import style from './PageWrapper.module.css'
 import Profile from "../Profile/Profile";
 import World from "../World/World";
 import Character from "../Character/Character";
-import {AppBar, Box, Button, Container, IconButton,Toolbar, Typography} from "@material-ui/core";
+import {AppBar, Box, Button, Container, IconButton,Toolbar, Typography, Grid} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/List';
-import {makeStyles} from "@material-ui/core/styles";
+import {makeStyles,createMuiTheme,ThemeProvider} from "@material-ui/core/styles";
 import StateComponent from "../../StateComponentTest/StateComponent";
 
+const cosmoTheme = createMuiTheme({
+    palette:{
+        primary: {
+            main: '#FFAFFF',
+            dark: '#FFAFFF',
+            light: '#FFAFFF',
+        },
+        secondary: {
+            main: '#AAAAAA',
+        },
+    }
+})
 const useStyles = makeStyles((theme) => ({
-    root:{
+    paper:{
         flexGrow: 1,
     },
     menuButton:{
@@ -20,43 +32,51 @@ const useStyles = makeStyles((theme) => ({
     title:{
         flexGrow:1,
         color: 'white',
-    }
+    },
+    contentCenter:{
+        textAlign: 'center',
+        marginTop: 70,
+    },
 }))
 
-const PageWrapper = () => {
-    const classes = useStyles();
+const PageWrapper = () =>    {
+    const styles = useStyles();
 
     return (
-        <BrowserRouter>
-            <Box>
-                <AppBar position="fixed">
-                    <Toolbar>
-                        <IconButton edge="start" color="inherit" aria-label="menu" className={classes.menuButton}>
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography variant="h6" className={classes.title}>My-Universe </Typography>
-                        <Box mr={2}>
-                            <Link to="/profile/auth">
-                                <Button color="primary" variant="contained"> Log In</Button>
+        <ThemeProvider theme={cosmoTheme}>
+            <BrowserRouter>
+                <Box>
+                    <AppBar position="fixed">
+                        <Toolbar>
+                            <IconButton edge="start" color="inherit" aria-label="menu" className={styles.menuButton}>
+                                <MenuIcon/>
+                            </IconButton>
+                            <Typography variant="h6" className={styles.title}>My-Universe </Typography>
+                            <Box mr={2}>
+                                <Link to="/profile/auth">
+                                    <Button color="primary" variant="contained"> Log In</Button>
+                                </Link>
+                            </Box>
+                            <Link to="/profile/reg">
+                                <Button color="secondary" variant="contained" >Sign Up</Button>
                             </Link>
-                        </Box>
-                        <Link to="/profile/reg">
-                            <Button color="secondary" variant="contained" >Sign Up</Button>
-                        </Link>
-                    </Toolbar>
-                </AppBar>
-                <Toolbar/>
-            </Box>
+                        </Toolbar>
+                    </AppBar>
+                    <Toolbar/>
+                </Box>
 
 
-            <br/>
-            <Switch>
-                <Route path={'/profile'}><Profile/></Route>
-                <Route path={'/world'}><World/></Route>
-                <Route path={'/character'}><Character/></Route>
-            </Switch>
-            <StateComponent url={"http://localhost:1337/api/testList"}/>
-        </BrowserRouter>
+                <br/>
+                <Box className={styles.contentCenter}>
+                    <Switch>
+                        <Route path={'/profile'}><Profile/></Route>
+                        <Route path={'/world'}><World/></Route>
+                        <Route path={'/character'}><Character/></Route>
+                    </Switch>
+                    <StateComponent url={"http://localhost:1337/api/testList"}/>
+                </Box>
+            </BrowserRouter>
+        </ThemeProvider>
 
     );
 }
