@@ -2,7 +2,6 @@ import React from 'react';
 import {useState} from 'react'
 import logo from './logo.svg';
 import {BrowserRouter, Route} from 'react-router-dom'
-import style from './../Profile.module.css'
 import axios from 'axios'
 
 const Auth = () => {
@@ -48,7 +47,7 @@ const Auth = () => {
 
 
     return (
-        <div className={style.center}>
+        <div>
             <div>Авторизация</div>
             <br/>
             <form onSubmit={authUser}>

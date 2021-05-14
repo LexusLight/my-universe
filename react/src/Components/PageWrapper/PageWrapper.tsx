@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
-import style from './PageWrapper.module.css'
 import Profile from "../Profile/Profile";
 import World from "../World/World";
 import Character from "../Character/Character";
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     },
     contentCenter:{
         textAlign: 'center',
-        marginTop: 70,
+        // marginTop: 70,
     },
 }))
 
@@ -51,7 +50,7 @@ const PageWrapper = () =>    {
                             <IconButton edge="start" color="inherit" aria-label="menu" className={styles.menuButton}>
                                 <MenuIcon/>
                             </IconButton>
-                            <Typography variant="h6" className={styles.title}>My-Universe </Typography>
+                            <Typography variant="h6" className={styles.title}>My-Universe</Typography>
                             <Box mr={2}>
                                 <Link to="/profile/auth">
                                     <Button color="primary" variant="contained"> Log In</Button>
@@ -66,14 +65,13 @@ const PageWrapper = () =>    {
                 </Box>
 
 
-                <br/>
                 <Box className={styles.contentCenter}>
                     <Switch>
                         <Route path={'/profile'}><Profile/></Route>
                         <Route path={'/world'}><World/></Route>
                         <Route path={'/character'}><Character/></Route>
                     </Switch>
-                    <StateComponent url={"http://localhost:1337/api/testList"}/>
+                    {/*<StateComponent url={"http://localhost:1337/api/testList"}/>*/}
                 </Box>
             </BrowserRouter>
         </ThemeProvider>

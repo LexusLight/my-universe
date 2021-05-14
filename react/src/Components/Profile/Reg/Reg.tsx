@@ -2,7 +2,6 @@ import React, {useRef} from 'react'
 import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
-//import style from './../Profile.module.css'
 import {Box, Button, TextField, makeStyles} from "@material-ui/core";
 import {PhotoCamera} from "@material-ui/icons";
 
@@ -26,10 +25,10 @@ const Reg = () => {
     let [email,setEmail] = useState(" ");
     let [password,setPassword] = useState("");
     let [password2,setPassword2] = useState("");
-    let [image,setImage] = useState('');
+    let [image,setImage] = useState("");
     let [message,setMessage] = useState("");
 
-    const addPerson = async(event:any) => {
+    const addUser = async(event:any) => {
         event.preventDefault();
         let text = "Пароли не совпадают"
         if(password === password2){
@@ -37,7 +36,14 @@ const Reg = () => {
             data.append('username',username);
             data.append('email',email);
             data.append('password',password);
-            data.append('image',image,uuidv4()+'.png');
+
+            try{
+                data.append('image',image,uuidv4()+'.png');
+            }catch (e){
+                setMessage("Выберите аватарку");
+                return;
+            }
+
             try{
                 const  response = await axios.post('http://localhost:1337/api/reg',data);
                 text = response.data;
@@ -68,7 +74,7 @@ const Reg = () => {
         <div>
             <Box>Регистрация</Box>
             <br/>
-            <form onSubmit={addPerson}>
+            <form onSubmit={addUser}>
                 <div color={"red"}>{message}</div>
                 <Box>
                     <input
@@ -95,7 +101,7 @@ const Reg = () => {
                 <br/>
                 <TextField className={styles.formInput} type="password" variant="filled" label="password"value={password2} onChange={password2Handler} required/>
                 <br/>
-                <Button color="primary" variant="outlined"> Отправить </Button>
+                <Button color="primary" variant="outlined" type="submit"> Отправить </Button>
             </form>
         </div>
     );

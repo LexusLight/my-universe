@@ -20,15 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_nodejs/src/test_api/api_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/src/test_api/query_test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/StateComponentTest/State.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/StateComponentTest/StateComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,26 +60,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_nodejs/src/test_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/Profile/Page" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
-      <recent name="D:\GitHub\my-universe\react\src\Components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\my-universe\api_nodejs\src\character" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\user" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
       <recent name="D:\GitHub\my-universe\api_nodejs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Page" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -102,6 +102,8 @@
       <workItem from="1603646029097" duration="14370000" />
       <workItem from="1603738118281" duration="3542000" />
       <workItem from="1614005297021" duration="13096000" />
+      <workItem from="1616949730499" duration="1328000" />
+      <workItem from="1621014992727" duration="4772000" />
     </task>
     <servers />
   </component>
@@ -124,10 +126,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621024610195">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621024610195" />
     <state x="308" y="76" key="SettingsEditor" timestamp="1614014951181">
       <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="308" y="76" key="SettingsEditor/64.0.1472.864@64.0.1472.864" timestamp="1614014951181" />
+    <state x="1096" y="235" key="run.anything.popup" timestamp="1616528481172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1096" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616528481172" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1614008922260">
       <screen x="64" y="0" width="1472" height="864" />
     </state>
