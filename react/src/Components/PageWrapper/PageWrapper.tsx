@@ -65,14 +65,14 @@ const PageWrapper = () =>    {
                 </Box>
 
 
-                <Box className={styles.contentCenter}>
+                <Container className={styles.contentCenter} fixed>
                     <Switch>
                         <Route path={'/profile'}><Profile/></Route>
                         <Route path={'/world'}><World/></Route>
                         <Route path={'/character'}><Character/></Route>
                     </Switch>
                     {/*<StateComponent url={"http://localhost:1337/api/testList"}/>*/}
-                </Box>
+                </Container>
             </BrowserRouter>
         </ThemeProvider>
 
