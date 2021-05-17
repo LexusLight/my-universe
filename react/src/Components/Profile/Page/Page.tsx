@@ -11,13 +11,13 @@ const Page = () => {
     const styles = useStyles();
 
     const Links = () => {
-        let arr = ["link1","link2","link3","link4","link5","link6","link7","link8"]
+        let arr = ["DeviantArt","Vkontakte","Facebook","Twitter","Furaffinity","Skype","Discord","Sample"]
         return(
-            <Grid container>
+            <Grid container className={styles.content_padding}>
                 {arr.map((item:string)=>{
                     return(
-                        <Grid item md={3} key={item}>
-                        {item}
+                        <Grid item xl={3} lg={3} md={3} sm={3} xs={3} key={item} >
+                            {item}
                         </Grid>
                         )
                 })}
@@ -32,7 +32,7 @@ const Page = () => {
             <Grid container justify={"center"} wrap={"wrap"}>
                 {arr.map((item:string)=>{
                     return(
-                        <Grid item md={4} sm={4} xs={6} key={item}>
+                        <Grid item lg={2} md={4} sm={4} xs={6} key={item}>
                             <Paper>
                                 <Box className={styles.characterCircle}></Box>
                                 <Typography>{item}</Typography>
@@ -46,17 +46,34 @@ const Page = () => {
         )
     }
 
+    const Arts = () => {
+        let arr = ["Art1","Art2","Art3","Art4","Art5","Art6"]
+        return(
+            <Grid container justify={"flex-start"}>
+                {arr.map((item:string)=>{
+                    return(
+                        <Grid item md={4} sm={4} xs={4} key={item}>
+                            <Paper>
+                                <Box className={styles.artImage} bgcolor={"blue"}>{item}</Box>
+                            </Paper>
+                        </Grid>
+                    )
+                })}
+            </Grid>
+
+        )
+    }
+
     return (
         <Paper>
             {/*Аватарка, каритнка и описание*/}
             <Grid container >
-
-                <Grid xl={5} lg={5} md={8} sm={12} xs={12} item className={styles.content_padding}>
+                <Grid xl={5} lg={5} md={12} sm={12} xs={12} item className={styles.content_padding}>
 
                     <Grid container justify={"center"}>
                         <Grid md={12} item>
                             <Grid container justify={"space-between"}>
-                                <Grid xl={12} lg={12} item md={6} sm={12} xs={12}>
+                                <Grid xl={12} lg={12} item md={12} sm={12} xs={12}>
                                     <Box className={styles.avatarCircle} bgcolor={"cyan"}>
                                     </Box>
                                     <br/>
@@ -64,23 +81,15 @@ const Page = () => {
                                         @Username
                                     </Typography>
                                 </Grid>
-
-                                <Grid item xl={12} lg={12} md={6} sm={12} xs={12}>
-                                    <br/>
-                                    <Box>
-                                        {Links}
-                                    </Box>
-                                </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
 
-
                 <Grid xl={7} lg={7} md={12} sm={12} xs={12} item className={styles.content_padding}>
                     <Box className={styles.page_block}>
                         <Typography variant={"h5"}>
-                            Описание
+                            About
                         </Typography>
                         <br/>
                         <Typography variant={"subtitle1"}>
@@ -89,37 +98,38 @@ const Page = () => {
                     </Box>
                 </Grid>
 
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                    <br/>
+                    <Box className={styles.align_links}>
+                        {Links}
+                    </Box>
+                </Grid>
+
+                {/*<Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={styles.content_padding}>*/}
+                {/*    <Box className={styles.characters_block} bgcolor={"pink"}>*/}
+                {/*        <Typography variant={"h5"}>My Squad</Typography>*/}
+                {/*        <Box>*/}
+                {/*            {Characters}*/}
+                {/*        </Box>*/}
+                {/*    </Box>*/}
+                {/*</Grid>*/}
+
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={styles.content_padding}>
+                    <Box className={styles.characters_block} bgcolor={"pink"}>
+                        <Typography variant={"h5"}>Characters</Typography>
+                        <Box>
+                            {Characters}
+                        </Box>
+                    </Box>
+                </Grid>
+
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={styles.content_padding}>
+                    <Typography variant={"h5"}>Arts</Typography>
+                    <Box>
+                        {Arts}
+                    </Box>
+                </Grid>
             </Grid>
-
-            {/*Список персонажей*/}
-            <Box className={styles.characters_block} bgcolor={"pink"}>
-                <Typography variant={"h5"}>Персонажи</Typography>
-                <Box>
-                    {Characters}
-                </Box>
-            </Box>
-
-            {/*Галерея*/}
-            {/*<Grid container justify={"flex-start"}>*/}
-            {/*    <Grid md={4} sm={4} xs={4} item>*/}
-            {/*        <Box className={styles.art_block} bgcolor={"blue"}>Область 1</Box>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid md={4} sm={4} xs={4} item>*/}
-            {/*        <Box className={styles.art_block} bgcolor={"blue"}>Область 1</Box>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid md={4} sm={4} xs={4} item>*/}
-            {/*        <Box className={styles.art_block} bgcolor={"blue"}>Область 1</Box>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid md={4} sm={4} xs={4} item>*/}
-            {/*        <Box className={styles.art_block} bgcolor={"blue"}>Область 1</Box>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid md={4} sm={4} xs={4} item>*/}
-            {/*        <Box className={styles.art_block} bgcolor={"blue"}>Область 1</Box>*/}
-            {/*    </Grid>*/}
-            {/*    <Grid md={4} sm={4} xs={4} item>*/}
-            {/*        <Box className={styles.art_block} bgcolor={"blue"}>Область 1</Box>*/}
-            {/*    </Grid>*/}
-            {/*</Grid>*/}
         </Paper>
     );
 }

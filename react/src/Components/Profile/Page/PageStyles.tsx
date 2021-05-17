@@ -18,6 +18,12 @@ const useStyles = makeStyles({
         borderRadius:90,
         backgroundImage:`url(https://picsum.photos/100/100)`,
     },
+    artImage:{
+        marginLeft:"auto",
+        marginRight:"auto",
+        height:200,
+        backgroundImage:`url(https://picsum.photos/1000)`,
+    },
     page_block:{
 
     },
@@ -26,13 +32,12 @@ const useStyles = makeStyles({
         width: 200,
     },
     characters_block:{
-        height: 200,
-    },
-    art_block:{
-        height: 100,
     },
     content_padding:{
-        paddingTop:50,
+        paddingTop:20,
+    },
+    align_links:{
+        top: "50%",
     }
 
 })
