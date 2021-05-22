@@ -3,8 +3,19 @@ import {useState} from 'react'
 import logo from './logo.svg';
 import {BrowserRouter, Route} from 'react-router-dom'
 import axios from 'axios'
+import {Box, Button, Grid, makeStyles, Paper, TextField, Typography} from "@material-ui/core";
+
+
+const useStyles = makeStyles({
+    formInput:{
+        width: '51%',
+        maxWidth: 400,
+    },
+})
+
 
 const Auth = () => {
+    const styles = useStyles();
     let [username,setUsername] = useState("username");
     let [password,setPassword] = useState("password");
     let [message,setMessage] = useState("");
@@ -47,19 +58,31 @@ const Auth = () => {
 
 
     return (
-        <div>
-            <div>Авторизация</div>
-            <br/>
-            <form onSubmit={authUser}>
-                <div color={"red"}>{message}</div>
-                <br/>
-                <input type="text" value={username} onChange={usernameHandler}/>
-                <br/>
-                <input type="password" value={password} onChange={passwordHandler}/>
-                <br/>
-                <button> Авторизация </button>
-            </form>
-        </div>
+        <Paper>
+            <Grid container>
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                    <Box pb={10} pt={10}>
+                        <Typography>Authorization</Typography>
+                        <form onSubmit={authUser}>
+                            <Box mb={2} color={"red"}>
+                                {message}
+                            </Box>
+
+                            <Box mb={2}>
+                                <TextField className={styles.formInput} color="secondary" type="text" variant="outlined" label="Username" value={username} onChange={usernameHandler} required/>
+                            </Box>
+
+                            <Box mb={2}>
+                                <TextField className={styles.formInput} color="secondary" type="password" variant="outlined" label="Password" value={password} onChange={passwordHandler} required/>
+                            </Box>
+
+                            <Button color="secondary" variant="outlined" type="submit"> Авторизация </Button>
+                        </form>
+                    </Box>
+                </Grid>
+            </Grid>
+
+        </Paper>
     );
 }
 

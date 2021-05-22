@@ -33,9 +33,6 @@ const useStyles = makeStyles({
     },
     characters_block:{
     },
-    content_padding:{
-        paddingTop:20,
-    },
     align_links:{
         top: "50%",
     }

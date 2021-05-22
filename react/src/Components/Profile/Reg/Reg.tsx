@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
-import {Box, Button, TextField, makeStyles} from "@material-ui/core";
+import {Box, Button, TextField, makeStyles, Paper, Grid, Typography} from "@material-ui/core";
 import {PhotoCamera} from "@material-ui/icons";
 
 
@@ -71,39 +71,48 @@ const Reg = () => {
     }
 
     return (
-        <div>
-            <Box>Регистрация</Box>
-            <br/>
-            <form onSubmit={addUser}>
-                <div color={"red"}>{message}</div>
-                <Box>
-                    <input
-                        id="avatar-input"
-                        accept="image/*"
-                        style={{ display: 'none' }}
-                        type="file"
-                        onChange={imageHandler}
-                    />
-                    <label htmlFor="avatar-input" >
-                        <Button color="default" className={styles.avtarCircle}
-                                variant="contained"
-                                component="span">
-                            <PhotoCamera  />
-                        </Button>
-                    </label>
-                </Box>
-                <br/>
-                <TextField className={styles.formInput} type="text" variant="filled" label="@username" value={username} onChange={usernameHandler} required/>
-                <br/>
-                <TextField className={styles.formInput} type="email" variant="filled" label="email" value={email} onChange={emailHandler} required/>
-                <br/>
-                <TextField className={styles.formInput} type="password" variant="filled" label="password" value={password} onChange={passwordHandler} required/>
-                <br/>
-                <TextField className={styles.formInput} type="password" variant="filled" label="password"value={password2} onChange={password2Handler} required/>
-                <br/>
-                <Button color="primary" variant="outlined" type="submit"> Отправить </Button>
-            </form>
-        </div>
+        <Paper>
+            <Grid container>
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                    <Box pb={10} pt={10}>
+                        <Typography>Registration</Typography>
+                        <br/>
+                        <form onSubmit={addUser}>
+                            <div color={"red"}>{message}</div>
+                            <Box mb={2}>
+                                <input
+                                    id="avatar-input"
+                                    accept="image/*"
+                                    style={{ display: 'none' }}
+                                    type="file"
+                                    onChange={imageHandler}
+                                />
+                                <label htmlFor="avatar-input" >
+                                    <Button color="default" className={styles.avtarCircle}
+                                            variant="contained"
+                                            component="span">
+                                        <PhotoCamera  />
+                                    </Button>
+                                </label>
+                            </Box>
+                            <Box mb={2}>
+                                <TextField className={styles.formInput} color={"secondary"} type="text" variant="outlined" label="Username" value={username} onChange={usernameHandler} required/>
+                            </Box>
+                            <Box mb={2}>
+                                <TextField className={styles.formInput} color={"secondary"} type="email" variant="outlined" label="Email" value={email} onChange={emailHandler} required/>
+                            </Box>
+                            <Box mb={2}>
+                                <TextField className={styles.formInput} color={"secondary"} type="password" variant="outlined" label="Password" value={password} onChange={passwordHandler} required/>
+                            </Box>
+                            <Box mb={2}>
+                                <TextField className={styles.formInput} color={"secondary"} type="password" variant="outlined" label="Password" value={password2} onChange={password2Handler} required/>
+                            </Box>
+                            <Button color="secondary" variant="outlined" type="submit"> Register </Button>
+                        </form>
+                    </Box>
+                </Grid>
+            </Grid>
+        </Paper>
     );
 }
 

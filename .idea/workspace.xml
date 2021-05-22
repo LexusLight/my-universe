@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/Styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/Theme.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/PageStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/PageStyles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,26 +59,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/Profile/Page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/PageWrapper" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\react\src\Components\PageWrapper" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Page" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\my-universe\api_nodejs\src\character" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\user" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
       <recent name="D:\GitHub\my-universe\api_nodejs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Page" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Profile" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -100,6 +105,8 @@
       <workItem from="1621014992727" duration="4772000" />
       <workItem from="1621159473493" duration="14084000" />
       <workItem from="1621278793985" duration="6477000" />
+      <workItem from="1621509034537" duration="587000" />
+      <workItem from="1621679423910" duration="12170000" />
     </task>
     <servers />
   </component>
@@ -138,17 +145,5 @@
       <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864@64.0.1472.864" timestamp="1614008922260" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/react/src/Components/Profile/Page/PageStyles.tsx</url>
-          <line>6</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

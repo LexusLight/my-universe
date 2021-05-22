@@ -3,7 +3,7 @@ import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
 import {Box, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
-import {PhotoCamera} from "@material-ui/icons";
+import {BorderInner, PhotoCamera} from "@material-ui/icons";
 import useStyles from "./PageStyles";
 
 
@@ -13,7 +13,7 @@ const Page = () => {
     const Links = () => {
         let arr = ["DeviantArt","Vkontakte","Facebook","Twitter","Furaffinity","Skype","Discord","Sample"]
         return(
-            <Grid container className={styles.content_padding}>
+            <Grid container>
                 {arr.map((item:string)=>{
                     return(
                         <Grid item xl={3} lg={3} md={3} sm={3} xs={3} key={item} >
@@ -68,13 +68,13 @@ const Page = () => {
         <Paper>
             {/*Аватарка, каритнка и описание*/}
             <Grid container >
-                <Grid xl={5} lg={5} md={12} sm={12} xs={12} item className={styles.content_padding}>
+                <Grid xl={5} lg={5} md={12} sm={12} xs={12} item>
 
                     <Grid container justify={"center"}>
                         <Grid md={12} item>
                             <Grid container justify={"space-between"}>
                                 <Grid xl={12} lg={12} item md={12} sm={12} xs={12}>
-                                    <Box className={styles.avatarCircle} bgcolor={"cyan"}>
+                                    <Box className={styles.avatarCircle} border={1} mt={1}>
                                     </Box>
                                     <br/>
                                     <Typography variant={"h5"}>
@@ -86,8 +86,8 @@ const Page = () => {
                     </Grid>
                 </Grid>
 
-                <Grid xl={7} lg={7} md={12} sm={12} xs={12} item className={styles.content_padding}>
-                    <Box className={styles.page_block}>
+                <Grid xl={7} lg={7} md={12} sm={12} xs={12} item>
+                    <Box className={styles.page_block} mt={6} pr={8} pl={8} mb={2}>
                         <Typography variant={"h5"}>
                             About
                         </Typography>
@@ -99,9 +99,10 @@ const Page = () => {
                 </Grid>
 
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                    <br/>
-                    <Box className={styles.align_links}>
-                        {Links}
+                    <Box className={styles.align_links} border={1} pt={2} pb={2} mt={2}>
+                        <Box>
+                            {Links}
+                        </Box>
                     </Box>
                 </Grid>
 
@@ -114,19 +115,23 @@ const Page = () => {
                 {/*    </Box>*/}
                 {/*</Grid>*/}
 
-                <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={styles.content_padding}>
-                    <Box className={styles.characters_block} bgcolor={"pink"}>
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                    <Box className={styles.characters_block} pt={2} border={1} borderTop={0}>
                         <Typography variant={"h5"}>Characters</Typography>
+                        <br/>
                         <Box>
                             {Characters}
                         </Box>
                     </Box>
                 </Grid>
 
-                <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={styles.content_padding}>
-                    <Typography variant={"h5"}>Arts</Typography>
-                    <Box>
-                        {Arts}
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+                    <Box pt={2}>
+                        <Typography variant={"h5"}>Gallery</Typography>
+                        <br/>
+                        <Box border={1}>
+                            {Arts}
+                        </Box>
                     </Box>
                 </Grid>
             </Grid>
