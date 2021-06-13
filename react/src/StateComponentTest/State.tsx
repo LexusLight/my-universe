@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useEffect, useReducer} from "react";
-
+//Просто чтобы было. Стейт менеджмент.
 const defaultState = {
     responseData: null,
     isFetching: true,

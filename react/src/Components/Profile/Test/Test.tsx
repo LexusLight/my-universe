@@ -1,7 +1,9 @@
+//Эта штука рабоатет неправильно
+// зачем нам реактовский юз стейт и обсервер
 import React from 'react';
 import {useState} from 'react'
 import style from './../Profile.module.css'
-import {observer} from 'mobx-react'
+import {observer} from 'mobx-react-lite'
 
 interface props{
     store:any,
@@ -37,3 +39,4 @@ const Test = observer((props:props) => {
 })
 
 export  default  Test
+

@@ -1,9 +1,11 @@
 import React from 'react';
 import {useState} from 'react'
 import logo from './logo.svg';
-import {BrowserRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route, Redirect} from 'react-router-dom'
 import axios from 'axios'
 import {Box, Button, Grid, makeStyles, Paper, TextField, Typography} from "@material-ui/core";
+import userStore from "../../../Stores/UserStore";
+import {useHistory} from 'react-router-dom'
 
 
 const useStyles = makeStyles({
@@ -16,9 +18,11 @@ const useStyles = makeStyles({
 
 const Auth = () => {
     const styles = useStyles();
-    let [username,setUsername] = useState("username");
-    let [password,setPassword] = useState("password");
-    let [message,setMessage] = useState("");
+    const [username,setUsername] = useState("username");
+    const [password,setPassword] = useState("password");
+    const [message,setMessage] = useState("");
+
+    const history = useHistory();
 
     const authUser = async(event:any) => {
         event.preventDefault();
@@ -41,7 +45,11 @@ const Auth = () => {
             const text = "Вы авторизованы.";
             setMessage(text);
             const token = await response.data.token;
+            const username = await response.data.username;
             localStorage.setItem("universe_token",token);
+            localStorage.setItem("universe_username",username);
+            userStore.setUser();
+            history.push('/profile/page');
         }else{
             const text = await response.data;
             setMessage(text);
