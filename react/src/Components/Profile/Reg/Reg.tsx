@@ -3,11 +3,11 @@ import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
 import {Box, Button, TextField, makeStyles, Paper, Grid, Typography} from "@material-ui/core";
-import {PhotoCamera} from "@material-ui/icons";
+import {Image, PhotoCamera} from "@material-ui/icons";
 
 
 const useStyles = makeStyles({
-    avtarCircle:{
+    avatarCircle:{
         height:100,
         width:100,
         //marginTop:10,
@@ -17,18 +17,19 @@ const useStyles = makeStyles({
         width: '51%',
         maxWidth: 400,
     },
-})
+},)
 
 const Reg = () => {
     const styles = useStyles();
-    let [username,setUsername] = useState("");
-    let [email,setEmail] = useState(" ");
-    let [password,setPassword] = useState("");
-    let [password2,setPassword2] = useState("");
-    let [image,setImage] = useState("");
-    let [message,setMessage] = useState("");
+    const [username,setUsername] = useState("");
+    const [email,setEmail] = useState(" ");
+    const [password,setPassword] = useState("");
+    const [password2,setPassword2] = useState("");
+    const [image,setImage] = useState("");
+    const [image_url,setImageURL] = useState("");
+    const [message,setMessage] = useState("");
 
-    const addUser = async(event:any) => {
+    const addUser = async(event:any) => { //Отправка данных с формы на сервер
         event.preventDefault();
         let text = "Пароли не совпадают"
         if(password === password2){
@@ -38,7 +39,7 @@ const Reg = () => {
             data.append('password',password);
 
             try{
-                data.append('image',image,uuidv4()+'.png');
+                data.append('image',image,uuidv4()+'.png'); //добавление файла с уникальным именем
             }catch (e){
                 setMessage("Выберите аватарку");
                 return;
@@ -66,19 +67,22 @@ const Reg = () => {
     const password2Handler = (event:any) => {
         setPassword2(event.target.value);
     }
-    const imageHandler = (event:any) => {
+    const imageHandler = (event:any) => { //обработчик картинки подменяет блок подгрузки
         setImage(event.target.files[0]);
+        let image_path = URL.createObjectURL(event.target.files[0]);
+        setImageURL(image_path);
     }
 
     return (
         <Paper>
             <Grid container>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                    <Box pb={10} pt={10}>
-                        <Typography>Registration</Typography>
+                    <Box pb={10} pt={10} minHeight={"70vh"}>
+                        <Typography variant={"h5"}>REGISTRATION</Typography>
                         <br/>
+                        <Box>{message}</Box>
+                        {/*<Box className={styles.formInput} mb={2} color={"red"}></Box>*/}
                         <form onSubmit={addUser}>
-                            <div color={"red"}>{message}</div>
                             <Box mb={2}>
                                 <input
                                     id="avatar-input"
@@ -88,10 +92,15 @@ const Reg = () => {
                                     onChange={imageHandler}
                                 />
                                 <label htmlFor="avatar-input" >
-                                    <Button color="default" className={styles.avtarCircle}
+                                    <Button color="default"
+                                            className={styles.avatarCircle}
                                             variant="contained"
-                                            component="span">
-                                        <PhotoCamera  />
+                                            component="span"
+                                            style={{
+                                                backgroundImage:`url(${image_url})`,
+                                                backgroundSize: 'cover',
+                                            }}>
+                                        {!(image_url != '') &&<PhotoCamera/>}
                                     </Button>
                                 </label>
                             </Box>

@@ -5,9 +5,10 @@ import {v4 as uuidv4} from 'uuid'
 import {Box, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
 import {BorderInner, PhotoCamera} from "@material-ui/icons";
 import useStyles from "./PageStyles";
+import {defaultProps} from "../../../Props/Props";
 
 
-const Page = () => {
+const Page = (props:defaultProps) => {
     const styles = useStyles();
 
     const Links = () => {
@@ -78,7 +79,7 @@ const Page = () => {
                                     </Box>
                                     <br/>
                                     <Typography variant={"h5"}>
-                                        @Username
+                                        @{props.userStore?.username}
                                     </Typography>
                                 </Grid>
                             </Grid>

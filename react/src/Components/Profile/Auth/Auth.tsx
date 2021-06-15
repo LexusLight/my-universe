@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 
 const Auth = () => {
     const styles = useStyles();
-    const [username,setUsername] = useState("username");
-    const [password,setPassword] = useState("password");
+    const [username,setUsername] = useState("");
+    const [password,setPassword] = useState("");
     const [message,setMessage] = useState("");
 
     const history = useHistory();
@@ -69,8 +69,8 @@ const Auth = () => {
         <Paper>
             <Grid container>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                    <Box pb={10} pt={10}>
-                        <Typography>Authorization</Typography>
+                    <Box pb={10} pt={10} minHeight={"70vh"}>
+                        <Typography variant={"h5"}>SIGN IN</Typography>
                         <form onSubmit={authUser}>
                             <Box mb={2} color={"red"}>
                                 {message}

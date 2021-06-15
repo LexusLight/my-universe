@@ -25,7 +25,7 @@ const PageWrapper = () =>    {
                         <Toolbar/>
                         <Container className={styles.contentCenter} fixed>
                             <Switch>
-                                <Route path={'/profile'}><Profile/></Route>
+                                <Route path={'/profile'}><Profile userStore={userStore}/></Route>
                                 <Route path={'/world'}><World/></Route>
                                 <Route path={'/character'}><Character/></Route>
                             </Switch>

@@ -20,19 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Props/Props.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Test/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Test/Test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/StateComponentTest/State.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/StateComponentTest/State.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Stores/CharacterStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Stores/CharacterStore.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +109,7 @@
       <workItem from="1621509034537" duration="587000" />
       <workItem from="1621679423910" duration="12170000" />
       <workItem from="1623586076762" duration="17368000" />
+      <workItem from="1623736723613" duration="11417000" />
     </task>
     <servers />
   </component>
@@ -139,17 +136,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621024610195" />
-    <state x="308" y="76" key="SettingsEditor" timestamp="1614014951181">
-      <screen x="64" y="0" width="1472" height="864" />
-    </state>
-    <state x="308" y="76" key="SettingsEditor/64.0.1472.864@64.0.1472.864" timestamp="1614014951181" />
     <state x="1096" y="235" key="run.anything.popup" timestamp="1616528481172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1096" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616528481172" />
-    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1614008922260">
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1623746968958">
       <screen x="64" y="0" width="1472" height="864" />
     </state>
-    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864@64.0.1472.864" timestamp="1614008922260" />
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864@64.0.1472.864" timestamp="1623746968958" />
   </component>
 </project>

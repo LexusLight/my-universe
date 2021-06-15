@@ -6,6 +6,7 @@ class UserStore{
 
     username: string | null = null;
     token: string | null = null;
+    avatar: string | null = null;
 
     constructor() {
         makeObservable(this,{
@@ -13,11 +14,11 @@ class UserStore{
             token: observable,
             setUser: action,
             resetUser: action,
-            storeInfo: action,
+            getInfo: action,
         });
         autorun(()=>{
             this.setUser();
-            this.storeInfo();
+            this.getInfo();
         })
     }
 
@@ -26,15 +27,14 @@ class UserStore{
         this.token = localStorage.getItem("universe_token");
     }
 
+    getInfo = () => {
+        //тут будем подгружать статусы
+    }
+
     resetUser = () => {
         this.username = null;
         this.token = null;
         localStorage.clear();
-    }
-
-    storeInfo = () => {
-        console.log("username: "+this.username);
-        console.log("token: "+this.token);
     }
 }
 

@@ -4,7 +4,7 @@ import React, {useState, useEffect} from "react";
 import {useStyles} from "./Styles";
 import {observer} from "mobx-react-lite";
 import {defaultProps} from "../../Props/Props";
-import {render} from "react-dom";
+import {PersonRounded, MeetingRoom, PersonAdd, VpnKey} from "@material-ui/icons";
 
 const UserButtons = observer((props:defaultProps) => {
     const styles = useStyles();
@@ -19,10 +19,10 @@ const UserButtons = observer((props:defaultProps) => {
         return(
             <Box>
                 <Link to="/profile/page">
-                    <Button className={styles.primaryLight} variant="contained"> Profile </Button>
+                    <Button className={styles.primaryLight} variant="contained"><PersonRounded/> Page </Button>
                 </Link>
                 <Link to="#">
-                    <Button className={styles.secondaryLight} onClick={logOut} variant="contained" > Log Out </Button>
+                    <Button className={styles.secondaryLight} onClick={logOut} variant="contained" ><MeetingRoom/> Log Out </Button>
                 </Link>
             </Box>
         )
@@ -30,10 +30,10 @@ const UserButtons = observer((props:defaultProps) => {
         return(
             <Box>
                 <Link to="/profile/auth">
-                    <Button className={styles.primaryLight} variant="contained"> Log In</Button>
+                    <Button className={styles.primaryLight} variant="contained"><VpnKey/> Log In</Button>
                 </Link>
                 <Link to="/profile/reg">
-                    <Button className={styles.secondaryLight} variant="contained" >Sign Up</Button>
+                    <Button className={styles.secondaryLight} variant="contained"><PersonAdd/>Sign Up</Button>
                 </Link>
             </Box>
         )
