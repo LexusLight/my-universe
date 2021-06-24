@@ -2,7 +2,8 @@ const {User,UserLink} = require('../models');
 const bcrypt = require('bcrypt');
 const {tokenDecode,tokenSign} = require('./webtoken');
 
-const registerUser = async (username,email,password,img_url) => { //Регистрация профиля
+//Регистрация профиля
+const registerUser = async (username,email,password,img_url) => {
     let salt = await bcrypt.genSalt(10);
     let hash_password = await bcrypt.hash(password, salt);
     try {
@@ -17,7 +18,8 @@ const registerUser = async (username,email,password,img_url) => { //Регист
     }
 };
 
-const authUser = async (username, password) => { //Авторизация юзера
+//Авторизация юзера
+const authUser = async (username, password) => {
     const user = await User.findOne({
             where:{
                 username:username
@@ -41,11 +43,26 @@ const authUser = async (username, password) => { //Авторизация юзе
     }
 };
 
-const editUser = async(username,password,token) => { //Редактирование профиля
+
+//Подгрузка аватарки
+const getAvatar = async(username)=>{
+    const user = await User.findOne({
+        where:{
+            username:username,
+        },
+    })
+    const img_url_object = {
+        img_url:"/avatars/"+user.img_url,
+    }
+    return(img_url_object)
+}
+
+//Редактирование профиля
+const editUser = async(username,password,token) => {
     const token_obj = tokenDecode(token);
-    let salt = await bcrypt.genSalt(10);
-    let hash_password = await bcrypt.hash(password, salt);
-    let user = await User.findOne({
+    const salt = await bcrypt.genSalt(10);
+    const hash_password = await bcrypt.hash(password, salt);
+    const user = await User.findOne({
         where:{
             id: token_obj.id,
             username: token_obj.username,
@@ -61,7 +78,8 @@ const editUser = async(username,password,token) => { //Редактирован�
     }
 }
 
-const addLink = async (username,url,link_name,token) => { //Добавление линка
+//Добавление линка
+const addLink = async (username,url,link_name,token) => {
     const token_obj = tokenDecode(token);
     let user = await User.findOne(
         {where:{
@@ -84,6 +102,7 @@ const addLink = async (username,url,link_name,token) => { //Добавление
 module.exports = {
     registerUser,
     authUser,
+    getAvatar,
     editUser,
     addLink,
 }

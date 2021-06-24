@@ -6,6 +6,7 @@ import axios from 'axios'
 import {Box, Button, Grid, makeStyles, Paper, TextField, Typography} from "@material-ui/core";
 import userStore from "../../../Stores/UserStore";
 import {useHistory} from 'react-router-dom'
+import {Alert, AlertTitle} from "@material-ui/lab";
 
 
 const useStyles = makeStyles({
@@ -13,6 +14,11 @@ const useStyles = makeStyles({
         width: '51%',
         maxWidth: 400,
     },
+    formError:{
+    marginLeft: "auto",
+        marginRight: "auto",
+        maxWidth: 400,
+}
 })
 
 
@@ -49,7 +55,7 @@ const Auth = () => {
             localStorage.setItem("universe_token",token);
             localStorage.setItem("universe_username",username);
             userStore.setUser();
-            history.push('/profile/page');
+            history.push(`/profile/page/${username}`);
         }else{
             const text = await response.data;
             setMessage(text);
@@ -64,17 +70,13 @@ const Auth = () => {
     }
 
 
-
     return (
         <Paper>
             <Grid container>
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Box pb={10} pt={10} minHeight={"70vh"}>
-                        <Typography variant={"h5"}>SIGN IN</Typography>
+                        <Typography variant={"h5"}>LOG IN</Typography>
                         <form onSubmit={authUser}>
-                            <Box mb={2} color={"red"}>
-                                {message}
-                            </Box>
 
                             <Box mb={2}>
                                 <TextField className={styles.formInput} color="secondary" type="text" variant="outlined" label="Username" value={username} onChange={usernameHandler} required/>
@@ -83,6 +85,13 @@ const Auth = () => {
                             <Box mb={2}>
                                 <TextField className={styles.formInput} color="secondary" type="password" variant="outlined" label="Password" value={password} onChange={passwordHandler} required/>
                             </Box>
+
+                            {message &&
+                            <Box mb={2} className={styles.formError}>
+                                <Alert severity="error" >
+                                    <AlertTitle>{message}</AlertTitle>
+                                </Alert>
+                            </Box>}
 
                             <Button color="secondary" variant="outlined" type="submit"> Авторизация </Button>
                         </form>

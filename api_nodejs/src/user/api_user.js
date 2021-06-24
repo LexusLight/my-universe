@@ -1,8 +1,10 @@
+const {getAvatar} = require("./query_user");
 const {registerUser,authUser,editUser,addLink} = require('./query_user')
 const {forgotPassword} = require('../email/email_sender')
 
 const apiUser = (app) => {
-    app.post('/api/reg', async (request, response) => { //Зарегистрировать пользователя
+    //Зарегистрировать пользователя
+    app.post('/api/reg', async (request, response) => {
         try {
             const username = request.body.username;
             const email = request.body.email;
@@ -17,7 +19,8 @@ const apiUser = (app) => {
         }
     });
 
-    app.post('/api/auth', async (request, response)=>{ //Авторизовать пользователя
+    //Авторизовать пользователя
+    app.post('/api/auth', async (request, response)=>{
         const username = request.body.username;
         const password = request.body.password;
         try{
@@ -28,7 +31,19 @@ const apiUser = (app) => {
         }
     });
 
-    app.post('/api/edit_user', async (request, response)=>{ //Редактировать юзернейм
+    //Получить линк на аватарку
+    app.get('/api/avatar', async (request, response)=>{
+        const username = request.query.username;
+        try{
+            const img_url_object = await getAvatar(username);
+            response.status(200).json(img_url_object);
+        }catch (e){
+            response.status(401).send(e);
+        }
+    });
+
+    //Редактировать юзернейм
+    app.post('/api/edit_user', async (request, response)=>{
         const username = request.body.username;
         const password = request.body.password;
         const token = request.body.token;
@@ -40,7 +55,8 @@ const apiUser = (app) => {
         }
     });
 
-    app.post('/api/forgot_password', async (request, response)=>{ //Если забыли пароль
+    //Если забыли пароль. Не работает!
+    app.post('/api/forgot_password', async (request, response)=>{
         const email = request.body.email;
         try{
             await forgotPassword(email);
@@ -50,7 +66,8 @@ const apiUser = (app) => {
         }
     });
 
-    app.post('/api/add_link', async (request, response) => { //Добавить пользователя
+    //Добавить ссылку
+    app.post('/api/add_link', async (request, response) => {
         let username = request.body.username;
         let url = request.body.url;
         let link_name = request.body.link_name;

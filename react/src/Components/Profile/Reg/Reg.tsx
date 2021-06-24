@@ -3,7 +3,9 @@ import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
 import {Box, Button, TextField, makeStyles, Paper, Grid, Typography} from "@material-ui/core";
-import {Image, PhotoCamera} from "@material-ui/icons";
+import {Alert, AlertTitle} from "@material-ui/lab";
+import {PhotoCamera} from "@material-ui/icons";
+import {useHistory} from 'react-router-dom'
 
 
 const useStyles = makeStyles({
@@ -17,10 +19,16 @@ const useStyles = makeStyles({
         width: '51%',
         maxWidth: 400,
     },
+    formError:{
+        marginLeft: "auto",
+        marginRight: "auto",
+        maxWidth: 400,
+    }
 },)
 
 const Reg = () => {
     const styles = useStyles();
+    const history = useHistory();
     const [username,setUsername] = useState("");
     const [email,setEmail] = useState(" ");
     const [password,setPassword] = useState("");
@@ -53,6 +61,7 @@ const Reg = () => {
             }
         }
         setMessage(text);
+        history.push(`/profile/page/${username}`);
     }
 
     const usernameHandler = (event:any) => {
@@ -80,8 +89,6 @@ const Reg = () => {
                     <Box pb={10} pt={10} minHeight={"70vh"}>
                         <Typography variant={"h5"}>REGISTRATION</Typography>
                         <br/>
-                        <Box>{message}</Box>
-                        {/*<Box className={styles.formInput} mb={2} color={"red"}></Box>*/}
                         <form onSubmit={addUser}>
                             <Box mb={2}>
                                 <input
@@ -116,6 +123,14 @@ const Reg = () => {
                             <Box mb={2}>
                                 <TextField className={styles.formInput} color={"secondary"} type="password" variant="outlined" label="Password" value={password2} onChange={password2Handler} required/>
                             </Box>
+
+                            {message &&
+                            <Box mb={2} className={styles.formError}>
+                                <Alert severity="error" >
+                                    <AlertTitle>{message}</AlertTitle>
+                                </Alert>
+                            </Box>}
+
                             <Button color="secondary" variant="outlined" type="submit"> Register </Button>
                         </form>
                     </Box>

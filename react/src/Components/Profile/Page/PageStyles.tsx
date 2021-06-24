@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         marginRight:"auto",
         //marginTop:10,
         borderRadius:180,
-        backgroundImage:`url(https://picsum.photos/300/300)`,
+        backgroundSize: "cover",
     },
     characterCircle:{
         height:100,

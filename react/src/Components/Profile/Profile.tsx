@@ -15,7 +15,7 @@ const Profile = (props:defaultProps) => {
             <Route path={`${url}/reg`}><Reg/></Route>
             <Route path={`${url}/auth`}><Auth/></Route>
             <Route path={`${url}/add_character`}><AddCharacter/></Route>
-            <Route path={`${url}/page`}><Page userStore={props.userStore} /></Route>
+            <Route path={`${url}/page/:username`}><Page userStore={props.userStore} /></Route>
             <Route path={`${url}/test`}><Test  store={characterStore}/></Route>
         </Switch>
     );

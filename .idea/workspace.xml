@@ -22,13 +22,15 @@
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Auth/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/PageStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/PageStyles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,26 +62,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Stores" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api_nodejs/media" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\my-universe\api_nodejs\media" />
+      <recent name="D:\GitHub\my-universe\react\src\Stores" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\PageWrapper" />
+      <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Page" />
+      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\my-universe\api_nodejs\src\character" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\user" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
       <recent name="D:\GitHub\my-universe\api_nodejs\src\api" />
       <recent name="D:\GitHub\my-universe\api_nodejs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\my-universe\react\src\Stores" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\PageWrapper" />
-      <recent name="D:\GitHub\my-universe\react\src\Components\Profile\Page" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\test_api" />
-      <recent name="D:\GitHub\my-universe\api_nodejs\src\queries" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -110,6 +112,7 @@
       <workItem from="1621679423910" duration="12170000" />
       <workItem from="1623586076762" duration="17368000" />
       <workItem from="1623736723613" duration="11417000" />
+      <workItem from="1624558602727" duration="7813000" />
     </task>
     <servers />
   </component>
@@ -136,6 +139,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621024610195" />
+    <state width="1898" height="119" key="GridCell.Tab.0.bottom" timestamp="1624566438182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1898" height="119" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1624566438182" />
+    <state width="1898" height="119" key="GridCell.Tab.0.center" timestamp="1624566438182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1898" height="119" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1624566438182" />
+    <state width="1898" height="119" key="GridCell.Tab.0.left" timestamp="1624566438182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1898" height="119" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1624566438182" />
+    <state width="1898" height="119" key="GridCell.Tab.0.right" timestamp="1624566438182">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1898" height="119" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624566438182" />
     <state x="1096" y="235" key="run.anything.popup" timestamp="1616528481172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

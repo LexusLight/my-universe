@@ -1,15 +1,32 @@
-import React, {useRef} from 'react'
-import {useState} from 'react'
-import axios from 'axios'
-import {v4 as uuidv4} from 'uuid'
-import {Box, Grid, makeStyles, Paper, Typography} from "@material-ui/core";
-import {BorderInner, PhotoCamera} from "@material-ui/icons";
+import React, {useState} from 'react'
+import {Box, Grid, Paper, Typography} from "@material-ui/core";
 import useStyles from "./PageStyles";
+import {useParams} from "react-router-dom";
 import {defaultProps} from "../../../Props/Props";
+import axios from "axios";
 
 
 const Page = (props:defaultProps) => {
     const styles = useStyles();
+    const {username} = useParams();
+
+    const [avatar,getAvatar] = useState(async () => {
+        const response = await axios.get(
+            'http://localhost:1337/api/avatar',
+            {
+                params: {
+                    username: username,
+                }
+            });
+        getAvatar(response.data.img_url)
+    });
+    const [about,getAbout] = useState();
+    const [links,getLinks] = useState();
+    const [characters,getCharacters] = useState();
+    const [arts,getArts] = useState();
+
+
+
 
     const Links = () => {
         let arr = ["DeviantArt","Vkontakte","Facebook","Twitter","Furaffinity","Skype","Discord","Sample"]
@@ -23,7 +40,6 @@ const Page = (props:defaultProps) => {
                         )
                 })}
             </Grid>
-
         )
     }
 
@@ -75,11 +91,14 @@ const Page = (props:defaultProps) => {
                         <Grid md={12} item>
                             <Grid container justify={"space-between"}>
                                 <Grid xl={12} lg={12} item md={12} sm={12} xs={12}>
-                                    <Box className={styles.avatarCircle} border={1} mt={1}>
+                                    <Box className={styles.avatarCircle}
+                                         border={1} mt={1}
+                                         style={{backgroundImage:`url(http://127.0.0.1:1337${avatar})`}} //Как поставить https?
+                                    >
                                     </Box>
                                     <br/>
                                     <Typography variant={"h5"}>
-                                        @{props.userStore?.username}
+                                        @{username}
                                     </Typography>
                                 </Grid>
                             </Grid>
