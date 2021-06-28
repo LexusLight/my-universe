@@ -6,24 +6,12 @@ import axios from 'axios'
 import {Box, Button, Grid, makeStyles, Paper, TextField, Typography} from "@material-ui/core";
 import userStore from "../../../Stores/UserStore";
 import {useHistory} from 'react-router-dom'
-import {Alert, AlertTitle} from "@material-ui/lab";
-
-
-const useStyles = makeStyles({
-    formInput:{
-        width: '51%',
-        maxWidth: 400,
-    },
-    formError:{
-    marginLeft: "auto",
-        marginRight: "auto",
-        maxWidth: 400,
-}
-})
+import {authStyles} from "../../Style/Styles";
+//import {Alert, AlertTitle} from "@material-ui/lab";
 
 
 const Auth = () => {
-    const styles = useStyles();
+    const styles = authStyles();
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
     const [message,setMessage] = useState("");
@@ -88,9 +76,9 @@ const Auth = () => {
 
                             {message &&
                             <Box mb={2} className={styles.formError}>
-                                <Alert severity="error" >
-                                    <AlertTitle>{message}</AlertTitle>
-                                </Alert>
+                                {/*<Alert severity="error" >*/}
+                                {/*    <AlertTitle>{message}</AlertTitle>*/}
+                                {/*</Alert>*/}
                             </Box>}
 
                             <Button color="secondary" variant="outlined" type="submit"> Авторизация </Button>

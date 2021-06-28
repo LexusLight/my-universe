@@ -1,13 +1,14 @@
 import {AppBar, Box, Button, Container, Grid, Toolbar, Typography} from "@material-ui/core";
 import {Link, useHistory} from "react-router-dom";
 import React, {useState, useEffect} from "react";
-import {useStyles} from "./Styles";
+import {wrapperStyles} from "../Style/Styles";
 import {observer} from "mobx-react-lite";
 import {defaultProps} from "../../Props/Props";
 import {PersonRounded, MeetingRoom, PersonAdd, VpnKey} from "@material-ui/icons";
+import userStore from "../../Stores/UserStore";
 
 const UserButtons = observer((props:defaultProps) => {
-    const styles = useStyles();
+    const styles = wrapperStyles();
     const history = useHistory();
 
     const logOut = () => {
@@ -18,7 +19,7 @@ const UserButtons = observer((props:defaultProps) => {
     if (props.userStore?.username) {
         return(
             <Box>
-                <Link to="/profile/page">
+                <Link to={`/profile/page/${userStore.username}`}>
                     <Button className={styles.primaryLight} variant="contained"><PersonRounded/> Page </Button>
                 </Link>
                 <Link to="#">
@@ -41,7 +42,7 @@ const UserButtons = observer((props:defaultProps) => {
 })
 
 const PageWrapperToolbar = observer((props:defaultProps) =>{
-    const styles = useStyles();
+    const styles = wrapperStyles();
     return(
         <AppBar position="fixed">
             <Toolbar>

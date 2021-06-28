@@ -3,31 +3,14 @@ import {useState} from 'react'
 import axios from 'axios'
 import {v4 as uuidv4} from 'uuid'
 import {Box, Button, TextField, makeStyles, Paper, Grid, Typography} from "@material-ui/core";
-import {Alert, AlertTitle} from "@material-ui/lab";
+//import {Alert, AlertTitle} from "@material-ui/lab";
 import {PhotoCamera} from "@material-ui/icons";
 import {useHistory} from 'react-router-dom'
+import {regStyles} from "../../Style/Styles";
 
-
-const useStyles = makeStyles({
-    avatarCircle:{
-        height:100,
-        width:100,
-        //marginTop:10,
-        borderRadius:50,
-    },
-    formInput:{
-        width: '51%',
-        maxWidth: 400,
-    },
-    formError:{
-        marginLeft: "auto",
-        marginRight: "auto",
-        maxWidth: 400,
-    }
-},)
 
 const Reg = () => {
-    const styles = useStyles();
+    const styles = regStyles();
     const history = useHistory();
     const [username,setUsername] = useState("");
     const [email,setEmail] = useState(" ");
@@ -126,9 +109,9 @@ const Reg = () => {
 
                             {message &&
                             <Box mb={2} className={styles.formError}>
-                                <Alert severity="error" >
-                                    <AlertTitle>{message}</AlertTitle>
-                                </Alert>
+                                {/*<Alert severity="error" >*/}
+                                {/*    <AlertTitle>{message}</AlertTitle>*/}
+                                {/*</Alert>*/}
                             </Box>}
 
                             <Button color="secondary" variant="outlined" type="submit"> Register </Button>

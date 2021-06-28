@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
-import {Box, Grid, Paper, Typography} from "@material-ui/core";
-import {pageStyles} from "../../Style/Styles";
+import {Box, Grid, Input, Paper, Typography} from "@material-ui/core";
 import {useParams} from "react-router-dom";
 import {defaultProps} from "../../../Props/Props";
 import axios from "axios";
+import {editStyles} from "../../Style/Styles";
 
 
-const Page = (props:defaultProps) => {
-    const styles = pageStyles();
+const EditPage = (props:defaultProps) => {
+    const styles = editStyles();
     const {username} = useParams();
 
     const [avatar,setAvatar] = useState();
@@ -101,9 +101,7 @@ const Page = (props:defaultProps) => {
                                     >
                                     </Box>
                                     <br/>
-                                    <Typography variant={"h5"}>
-                                        @{username}
-                                    </Typography>
+                                    <Input value={'@'+{username}}/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -163,4 +161,4 @@ const Page = (props:defaultProps) => {
     );
 }
 
-export default Page;
+export default EditPage;

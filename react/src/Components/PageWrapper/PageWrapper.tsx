@@ -7,14 +7,14 @@ import Character from "../Character/Character";
 import {AppBar, Box, Button, Container, Grid, Paper, Toolbar, Typography} from "@material-ui/core";
 import {ThemeProvider} from "@material-ui/core/styles";
 import {cosmoTheme} from  "./Theme"
-import {useStyles} from  "./Styles"
+import {wrapperStyles} from "../Style/Styles"
 import PageWrapperToolbar from "./PageWrapperToolbar";
 
 import userStore from "../../Stores/UserStore";
 
 
 const PageWrapper = () =>    {
-    const styles = useStyles();
+    const styles = wrapperStyles();
 
     return (
         <ThemeProvider theme={cosmoTheme}>
