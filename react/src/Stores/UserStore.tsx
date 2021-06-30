@@ -4,7 +4,7 @@ import axios from 'axios'
 // Model the application state.
 class UserStore{
 
-    username: string | null = null;
+    username: string = '';
     token: string | null = null;
     avatar: string | null = null;
 
@@ -23,7 +23,7 @@ class UserStore{
     }
 
     setUser = () => {
-        this.username = localStorage.getItem("universe_username");
+        this.username = localStorage.getItem("universe_username") || '';
         this.token = localStorage.getItem("universe_token");
     }
 
@@ -32,7 +32,7 @@ class UserStore{
     }
 
     resetUser = () => {
-        this.username = null;
+        this.username = '';
         this.token = null;
         localStorage.clear();
     }
