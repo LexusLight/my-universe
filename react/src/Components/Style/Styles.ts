@@ -60,6 +60,24 @@ const regStyles = makeStyles({
     }
 },)
 
+const charStyles = makeStyles({
+    avatarCircle:{
+        height:100,
+        width:100,
+        //marginTop:10,
+        borderRadius:50,
+    },
+    formInput:{
+        width: '51%',
+        maxWidth: 400,
+    },
+    formError:{
+        marginLeft: "auto",
+        marginRight: "auto",
+        maxWidth: 400,
+    }
+},)
+
 const editStyles = makeStyles({
     avatarCircle:{
         height:300,
@@ -138,10 +156,12 @@ const pageStyles = makeStyles({
 
 })
 
+
 export{
     wrapperStyles,
     regStyles,
     authStyles,
+    charStyles,
     pageStyles,
     editStyles,
 }

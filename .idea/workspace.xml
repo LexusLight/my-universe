@@ -20,15 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditArts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditAvatar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditCharacters.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditLinks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/avatars/4900d0a3-5b5b-42ad-b1b2-1954766cf4ff.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Stores/UserStore.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +111,8 @@
       <workItem from="1624868344093" duration="3699000" />
       <workItem from="1624957281677" duration="1906000" />
       <workItem from="1625030544884" duration="8041000" />
+      <workItem from="1626077469252" duration="1299000" />
+      <workItem from="1630594723148" duration="5733000" />
     </task>
     <servers />
   </component>
