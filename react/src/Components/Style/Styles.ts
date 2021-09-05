@@ -67,9 +67,30 @@ const charStyles = makeStyles({
         //marginTop:10,
         borderRadius:50,
     },
+    imagePortrait:{
+        height:300,
+        width:200,
+        //marginTop:10,
+        borderRadius:1,
+    },
+    imageReference:{
+        width: '70%',
+        maxWidth: 600,
+        height: 200,
+        //marginTop:10,
+        borderRadius:1,
+    },
+
+    picIcon:{
+        transform:"scale(4,4)",
+    },
     formInput:{
-        width: '51%',
+        width: '70%',
         maxWidth: 400,
+    },
+    formInputLong:{
+        width: '70%',
+        maxWidth: 600,
     },
     formError:{
         marginLeft: "auto",

@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/avatars/4900d0a3-5b5b-42ad-b1b2-1954766cf4ff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/avatars/713de96c-4792-47a7-940e-86607586b1f4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/avatars/85451532-b5fd-4f95-ab5e-f814c99ad2e2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +113,7 @@
       <workItem from="1625030544884" duration="8041000" />
       <workItem from="1626077469252" duration="1299000" />
       <workItem from="1630594723148" duration="5733000" />
+      <workItem from="1630847650212" duration="14528000" />
     </task>
     <servers />
   </component>
@@ -135,10 +136,6 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1621024610195">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621024610195" />
     <state width="1898" height="119" key="GridCell.Tab.0.bottom" timestamp="1624566438182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -155,13 +152,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1898" height="119" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624566438182" />
-    <state x="1096" y="235" key="run.anything.popup" timestamp="1616528481172">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1096" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616528481172" />
-    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1624869433889">
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1630855643798">
       <screen x="64" y="0" width="1472" height="864" />
     </state>
-    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864@64.0.1472.864" timestamp="1624869433889" />
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864@64.0.1472.864" timestamp="1630855643798" />
   </component>
 </project>
