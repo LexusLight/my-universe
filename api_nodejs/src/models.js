@@ -63,28 +63,48 @@ Character.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        img_url:{
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
         name:{
             type: DataTypes.STRING,
             allowNull: false,
             unique:false,
+        },
+        avatar:{
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         age:{
             type: DataTypes.INTEGER,
             allowNull:false,
             defaultValue:21,
         },
-        gender:{
+        sex:{
             type: DataTypes.STRING,
-            allowNull: true,
-            defaultValue:"unknown",
+            allowNull: false,
+            defaultValue: "Male",
+        },
+        full_name : {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         about:{
             type: DataTypes.TEXT,
             allowNull: false,
+        },
+        likes:{
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        dislikes:{
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        image:{
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        reference:{
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         quote:{
             type: DataTypes.STRING,

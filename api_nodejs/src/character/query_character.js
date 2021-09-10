@@ -1,7 +1,7 @@
 const {User,Character} = require('../models');
 const {tokenDecode} = require('../user/webtoken');
 
-const addCharacter = async (name, img_url, about, token) => { //Добавить персонажа
+const addCharacter = async (name, avatar, age, sex, full_name, about, likes, dislikes, image, reference, token, quote) => { //Добавить персонажа
     const token_obj = tokenDecode(token);
     const user = await User.findOne({
         where:{
@@ -24,8 +24,16 @@ const addCharacter = async (name, img_url, about, token) => { //Добавить
         }else{
             character = await Character.create({
                 name: name,
+                avatar: avatar.name,
+                age: age,
+                sex: sex,
+                full_name: full_name,
                 about: about,
-                img_url: img_url,
+                likes: likes,
+                dislikes: dislikes,
+                image: image.name,
+                reference: reference.name,
+                quote: quote,
                 userId: user.id,
             });
             return(character);

@@ -5,16 +5,31 @@ const apiCharacter = (app) => {
 
     app.post('/api/add_character', async (request, response)=>{ //Добавить персонажа
         const token = request.body.token;
-        const name = request.body.name;
-        const about = request.body.about;
-        const image = request.files.image;
-        const img_url = '/character_avatars/'+image.name;
         if(token === null){
             response.status(401).send("Ошибка авторизации");
+            return;
         }
+        const name = request.body.name;
+        const avatar = request.files.avatar;
+        const age = "21";
+        const sex = request.body.sex;
+        const full_name = request.body.full_name;
+        const about = request.body.about;
+        const likes = request.body.likes;
+        const dislikes = request.body.dislikes;
+        const image = request.files.image;
+        const reference = request.files.reference;
+        const quote = "fuck";
+
+        const avatar_url = '/character/character_avatars/'+avatar.name;
+        const image_url = '/character/character_images/'+image.name;
+        const reference_url = '/character/character_references/'+reference.name;
+
         try{
-            const character = await addCharacter(name,img_url,about,token);
-            await image.mv(`${__dirname}/../../media${img_url}`);
+            const character = await addCharacter(name, avatar, age, sex, full_name, about, likes, dislikes, image, reference, token, quote);
+            await image.mv(`${__dirname}/../../media${image_url}`);
+            await avatar.mv(`${__dirname}/../../media${avatar_url}`);
+            await reference.mv(`${__dirname}/../../media${reference_url}`);
             response.send(character.name + " создан!");
         }catch (e){
             response.status(401).send(e);

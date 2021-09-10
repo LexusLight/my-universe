@@ -52,7 +52,7 @@ const getAvatar = async(username)=>{
         },
     })
     const img_url_object = {
-        img_url:"/avatars/"+user.img_url,
+        img_url:"/user/user_avatars/"+user.img_url,
     }
     return(img_url_object)
 }

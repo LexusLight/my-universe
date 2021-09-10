@@ -31,11 +31,11 @@ const AddCharacter = () => {
     let [name,setName] = useState(""); //Краткое имя, показывающееся в списке
     let [avatar,setAvatar] = useState(''); //Аватарка-кружочек, показывающийся в списке
     let [avatar_url,setAvatarURL] = useState('');//Необходим ДЛЯ ОТОБРАЖЕНИЯ
-    let [sex, setSex] = useState(); //Пол, показывающийся в списке
-    let [fullName,setFullName] = useState(""); //Полное имя персонажа
+    let [sex, setSex] = useState(''); //Пол, показывающийся в списке
+    let [full_name,setFullName] = useState(""); //Полное имя персонажа
     let [about,setAbout] = useState("About..."); //Описание и история персонажа
-    let [likes, setLikes] = useState(); //Список того, что любит персонаж
-    let [dislikes, setDislikes] = useState(); //Список того, что не любит персонаж
+    let [likes, setLikes] = useState(''); //Список того, что любит персонаж
+    let [dislikes, setDislikes] = useState(''); //Список того, что не любит персонаж
     let [image,setImage] = useState('');//Изображение-портрет персонажа
     let [reference,setReference] = useState('');//Изображение-референс
     let [image_url,setImageURL] = useState('');//Изображение-портрет персонажа ДЛЯ ОТОБРАЖЕНИЯ
@@ -48,9 +48,15 @@ const AddCharacter = () => {
         token = (token == null) ? 'nothing': token;
         let data = new FormData();
         data.append('name',name);
+        data.append('avatar',avatar,uuidv4()+'.png');
+        data.append('sex', sex);
+        data.append('full_name',full_name);
         data.append('about',about);
-        data.append('token',token);
+        data.append('likes',likes);
+        data.append('dislikes',dislikes);
+        data.append('reference',reference, uuidv4()+'.png');
         data.append('image',image,uuidv4()+'.png');
+        data.append('token',token);
         let text:string;
         try{
             const response = await axios.post('http://localhost:1337/api/add_character', data);
@@ -71,9 +77,8 @@ const AddCharacter = () => {
         setAvatarURL(avatar_path);
     }
     const sexHandler = (event:any) => {
-        setImage(event.target.value);
+        setSex(event.target.value);
     }
-
     const fullNameHandler = (event:any) => {
         setFullName(event.target.value);
     }
@@ -96,7 +101,6 @@ const AddCharacter = () => {
     const dislikesHandler = (event:any) => {
         setDislikes(event.target.value);
     }
-
 
     return (
         <Paper>
@@ -149,7 +153,7 @@ const AddCharacter = () => {
                         <Typography variant={"h6"}> Full Info</Typography>
                         <br/>
                         <Box mb={2}>
-                            <TextField className={styles.formInputLong} variant={"outlined"} type="text" label={"Full name"} value={fullName} onChange={fullNameHandler} required/>
+                            <TextField className={styles.formInputLong} variant={"outlined"} type="text" label={"Full name"} value={full_name} onChange={fullNameHandler} required/>
                         </Box>
                         <Box mb={2}>
                             <Typography>Portrait</Typography>
