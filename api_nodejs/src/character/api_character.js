@@ -2,7 +2,7 @@ const {addCharacter,characterList,imageCharacter,editCharacter} = require('./que
 const path = require('path');
 
 const apiCharacter = (app) => {
-
+    //Рабочее
     app.post('/api/add_character', async (request, response)=>{ //Добавить персонажа
         const token = request.body.token;
         if(token === null){
@@ -36,6 +36,7 @@ const apiCharacter = (app) => {
         }
     });
 
+    //Нерабочее
     app.post('/api/edit_character',async(request,response)=>{ //Редактировать персонажа
         const token = request.body.token;
         const name = request.body.name;
@@ -54,7 +55,7 @@ const apiCharacter = (app) => {
         }
 
     })
-
+    //Рабочее
     app.get('/api/character_list', async (request, response)=>{ //Список персонажей по юзеру
         const username = request.query.username;
         const characters = await characterList(username);

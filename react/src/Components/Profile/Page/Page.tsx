@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {Box, Grid, Paper, Typography} from "@material-ui/core";
 import {pageStyles} from "../../Style/Styles";
 import {useParams} from "react-router-dom";
-import {defaultProps} from "../../../Props/Props";
+import {characterProfile, defaultProps} from "../../../Props/Props";
 import axios from "axios";
 
 
@@ -13,19 +13,30 @@ const Page = (props:defaultProps) => {
     const [avatar,setAvatar] = useState();
     const [about,setAbout] = useState();
     const [links,setLinks] = useState();
-    const [characters,setCharacters] = useState();
+    const [characters,setCharacters] = useState([]);
     const [arts,setArts] = useState();
 
     useEffect(() => {
         const getRequests = async () => {
-            const response = await axios.get(
+            let response = await axios.get(
                 'http://localhost:1337/api/avatar',
                 {
                     params: {
                         username: username,
                     }
-                });
+                }
+            )
             setAvatar(response.data.img_url)
+
+            response = await axios.get(
+                'http://localhost:1337/api/character_list',
+                {
+                    params: {
+                        username: username,
+                    }
+                }
+            )
+            setCharacters(response.data)
         }
         getRequests();
     },[])
@@ -48,16 +59,15 @@ const Page = (props:defaultProps) => {
     }
 
     const Characters = () => {
-        let arr = ["Character1","Character2","Character3","Character4","Character5","Character6"]
         return(
             <Grid container justify={"center"} wrap={"wrap"}>
-                {arr.map((item:string)=>{
+                {characters.map((item:characterProfile)=>{
                     return(
-                        <Grid item lg={2} md={4} sm={4} xs={6} key={item}>
+                        <Grid item lg={2} md={4} sm={4} xs={6} key={item.id}>
                             <Paper>
-                                <Box className={styles.characterCircle}></Box>
-                                <Typography>{item}</Typography>
-                                <Typography variant={"h6"}>♂</Typography>
+                                <Box className={styles.characterCircle} style={{backgroundImage:`url(http://127.0.0.1:1337/${item.avatar})`}}></Box>
+                                <Typography>{item.name}</Typography>
+                                <Typography variant={"h6"}>{item.sex}</Typography>
                             </Paper>
                         </Grid>
                     )

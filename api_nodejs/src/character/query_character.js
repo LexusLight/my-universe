@@ -1,6 +1,7 @@
 const {User,Character} = require('../models');
 const {tokenDecode} = require('../user/webtoken');
 
+//Рабочее
 const addCharacter = async (name, avatar, age, sex, full_name, about, likes, dislikes, image, reference, token, quote) => { //Добавить персонажа
     const token_obj = tokenDecode(token);
     const user = await User.findOne({
@@ -42,6 +43,7 @@ const addCharacter = async (name, avatar, age, sex, full_name, about, likes, dis
     }
 };
 
+//Нерабочее
 const editCharacter = async (name, img_url, about, token) => { //Редактировать персонажа
     const token_obj = tokenDecode(token);
     const user = await User.findOne({
@@ -79,13 +81,17 @@ const characterList = async(username) => { //Список персонажей �
             username:username,
         },
     });
-
-    return await Character.findAll({
+    let arr = await Character.findAll({
         where: {
             userId: user.id,
         },
-        attributes: ['id', 'name', 'age', 'gender', 'about', 'img_url']
+        attributes: ['id', 'name', 'sex', 'avatar'],
+        limit: 6
     });
+    await arr.forEach((item)=>{
+        item.avatar = 'character/character_avatars/'+item.avatar;
+    })
+    return arr;
 }
 
 

@@ -155,6 +155,7 @@ const pageStyles = makeStyles({
         marginRight:"auto",
         borderRadius:90,
         backgroundImage:`url(https://picsum.photos/100/100)`,
+        backgroundSize: 'cover',
     },
     artImage:{
         marginLeft:"auto",

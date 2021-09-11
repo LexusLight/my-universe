@@ -20,30 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/b1e79c57-0a6f-4ed3-a9f5-7cc31bced3d3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/10f976be-8882-4912-97ec-bed08e16d46a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/ea22821d-20c5-4633-8fa7-202457d74680.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/bb8518d1-ce33-4ae8-934c-30159438000f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/46d9dd44-53a6-4325-b69b-db44734c7cd8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/865ec531-7095-42e5-8142-026e5080b5b1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/f4ab1c6a-149b-43ef-a8ca-81749feab351.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/0e70440c-80c6-4a0a-b6bf-9b8f157547c9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/2fa46f52-f19a-4d21-a1f7-2bc53944642c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/4900d0a3-5b5b-42ad-b1b2-1954766cf4ff.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/713de96c-4792-47a7-940e-86607586b1f4.png" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/0e570ab9-23f1-469e-9f61-23374c3cfe94.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/7b93b3e5-b4fe-480a-9e1f-da01de2f9d8e.png" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/bc058bb8-e9ca-458c-aa77-8c6ef3b1bcb0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/85451532-b5fd-4f95-ab5e-f814c99ad2e2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/avatars/c5cc401e-a9ca-4c86-8499-8375d6565ec5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/character_avatars/0e94dd4b-5cb0-46d4-860c-9760ceb529ad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/character_avatars/2e9da47b-5f3c-4c75-a970-73f26651c073.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/character_avatars/37429ce3-255f-4930-8806-f1baec9819dd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/character_avatars/9503649a-c610-473c-b7a8-0f48b989a173.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/media/character_avatars/af556b63-7029-4c4d-b178-706d587285ff.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/character/api_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/character/api_character.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/character/query_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/character/query_character.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Props/Props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Props/Props.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +122,7 @@
       <workItem from="1630878051119" duration="457000" />
       <workItem from="1631201394945" duration="3618000" />
       <workItem from="1631235017061" duration="3290000" />
+      <workItem from="1631377002325" duration="4240000" />
     </task>
     <servers />
   </component>
