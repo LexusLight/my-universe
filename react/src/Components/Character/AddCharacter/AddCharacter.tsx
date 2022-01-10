@@ -62,7 +62,7 @@ const AddCharacter = () => {
             const response = await axios.post('http://localhost:1337/api/add_character', data);
             text = await response.data;
         }catch(error){
-            text = await error.response.data;
+            text = await JSON.stringify(error.response.data);
         }
         setMessage(text);
     }

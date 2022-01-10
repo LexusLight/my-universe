@@ -112,10 +112,10 @@ Character.init(
         }
     },
     {sequelize, modelName:'character'}
-)
+);
 
-class CharacterImage extends Model{}
-CharacterImage.init(
+class UserArt extends Model{}
+UserArt.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -132,39 +132,18 @@ CharacterImage.init(
             allowNull: true,
         },
     },
-    {sequelize, modelName:'character_image'}
-)
-
-class Test extends Model {}
-Test.init(
-    {
-        id : {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        word: {
-            type: DataTypes.STRING,
-            unique: true,
-            allowNull: false,
-        },
-        text:{
-            type: DataTypes.STRING,
-            unique:false,
-            allowNull:true,
-        },
-    },
-    { sequelize, modelName: 'test' }
+    {sequelize, modelName:'user_art'}
 );
-
 
 User.hasMany(UserLink, {onDelete: "cascade"});
 User.hasMany(Character, {onDelete: "cascade"});
-Character.hasMany(CharacterImage, {onDelete:"cascade"});
+User.hasMany(UserArt);
+
+UserArt.hasMany(Character);
 
 module.exports = {
     User,
     UserLink,
     Character,
-    Test,
+    UserArt,
 }

@@ -2,8 +2,11 @@ import React, {useEffect, useState} from 'react'
 import {Box, Grid, Paper, Typography} from "@material-ui/core";
 import {pageStyles} from "../../Style/Styles";
 import {useParams} from "react-router-dom";
-import {characterProfile, defaultProps} from "../../../Props/Props";
+import {defaultProps} from "../../../Props/Props";
 import axios from "axios";
+import Arts from "./Arts"
+import Links from "./Links";
+import Characters from "./Characters";
 
 
 const Page = (props:defaultProps) => {
@@ -11,10 +14,6 @@ const Page = (props:defaultProps) => {
     const {username} = useParams();
 
     const [avatar,setAvatar] = useState();
-    const [about,setAbout] = useState();
-    const [links,setLinks] = useState();
-    const [characters,setCharacters] = useState([]);
-    const [arts,setArts] = useState();
 
     useEffect(() => {
         const getRequests = async () => {
@@ -27,73 +26,9 @@ const Page = (props:defaultProps) => {
                 }
             )
             setAvatar(response.data.img_url)
-
-            response = await axios.get(
-                'http://localhost:1337/api/character_list',
-                {
-                    params: {
-                        username: username,
-                    }
-                }
-            )
-            setCharacters(response.data)
         }
-        getRequests();
+        getRequests().then();
     },[])
-
-
-
-    const Links = () => {
-        let arr = ["DeviantArt","Vkontakte","Facebook","Twitter","Furaffinity","Skype","Discord","Sample"]
-        return(
-            <Grid container>
-                {arr.map((item:string)=>{
-                    return(
-                        <Grid item xl={3} lg={3} md={3} sm={3} xs={3} key={item} >
-                            {item}
-                        </Grid>
-                        )
-                })}
-            </Grid>
-        )
-    }
-
-    const Characters = () => {
-        return(
-            <Grid container justify={"center"} wrap={"wrap"}>
-                {characters.map((item:characterProfile)=>{
-                    return(
-                        <Grid item lg={2} md={4} sm={4} xs={6} key={item.id}>
-                            <Paper>
-                                <Box className={styles.characterCircle} style={{backgroundImage:`url(http://127.0.0.1:1337/${item.avatar})`}}></Box>
-                                <Typography>{item.name}</Typography>
-                                <Typography variant={"h6"}>{item.sex}</Typography>
-                            </Paper>
-                        </Grid>
-                    )
-                })}
-            </Grid>
-
-        )
-    }
-
-    const Arts = () => {
-        let arr = ["Art1","Art2","Art3","Art4","Art5","Art6"]
-        return(
-            <Grid container justify={"flex-start"}>
-                {arr.map((item:string)=>{
-                    return(
-                        <Grid item md={4} sm={4} xs={4} key={item}>
-                            <Paper>
-                                <Box className={styles.artImage} bgcolor={"blue"}>{item}</Box>
-                            </Paper>
-                        </Grid>
-                    )
-                })}
-            </Grid>
-
-        )
-    }
 
     return (
         <Paper>
@@ -134,37 +69,29 @@ const Page = (props:defaultProps) => {
 
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Box className={styles.align_links} border={1} pt={2} pb={2} mt={2}>
+                        <Typography variant={"h5"}>
+                            Links
+                        </Typography>
                         <Box>
-                            {Links}
+                            <Links/>
                         </Box>
                     </Box>
                 </Grid>
-
-                {/*<Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={styles.content_padding}>*/}
-                {/*    <Box className={styles.characters_block} bgcolor={"pink"}>*/}
-                {/*        <Typography variant={"h5"}>My Squad</Typography>*/}
-                {/*        <Box>*/}
-                {/*            {Characters}*/}
-                {/*        </Box>*/}
-                {/*    </Box>*/}
-                {/*</Grid>*/}
-
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Box className={styles.characters_block} pt={2} border={1} borderTop={0}>
                         <Typography variant={"h5"}>Characters</Typography>
                         <br/>
                         <Box>
-                            {Characters}
+                            <Characters/>
                         </Box>
                     </Box>
                 </Grid>
-
                 <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Box pt={2}>
                         <Typography variant={"h5"}>Gallery</Typography>
                         <br/>
                         <Box border={1}>
-                            {Arts}
+                            <Arts/>
                         </Box>
                     </Box>
                 </Grid>

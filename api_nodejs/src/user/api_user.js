@@ -1,5 +1,5 @@
 const {getAvatar} = require("./query_user");
-const {registerUser,authUser,editUser,addLink} = require('./query_user')
+const {registerUser,authUser,editAbout,editAvatar,editUsername,addLink} = require('./query_user')
 const {forgotPassword} = require('../email/email_sender')
 
 const apiUser = (app) => {
@@ -42,13 +42,66 @@ const apiUser = (app) => {
         }
     });
 
+    //Список ссылок по юзеру
+    app.get('/api/link_list', async (request, response)=>{
+        //const username = request.query.username;
+        //const characters = await linkList(username);
+        //response.json(characters);
+    });
+
+    //Список артов по юзеру
+    app.get('/api/art_list', async (request, response)=>{
+        //const username = request.query.username;
+        //const characters = await linkList(username);
+        //response.json(characters);
+    });
+
+    //Список артов по юзеру
+    app.post('/api/add_arts', async (request, response)=>{
+        //const username = request.query.username;
+        //const characters = await linkList(username);
+        //response.json(characters);
+    });
+
+    //Информация о юзере
+    app.get('/api/about', async (request, response)=>{
+        //const username = request.query.username;
+        //const characters = await linkList(username);
+        //response.json(characters);
+    });
+
     //Редактировать юзернейм
-    app.post('/api/edit_user', async (request, response)=>{
-        const username = request.body.username;
-        const password = request.body.password;
+    app.post('/api/edit_username', async (request, response)=>{
         const token = request.body.token;
+        const username = request.body.username;
         try{
-            await editUser(username,password,token);
+            await editUsername(username,token);
+            response.status(200).send('Профиль отредактирован!');
+        }catch (e){
+            response.status(401).send(e);
+        }
+    });
+
+    //Редактировать аватар ДОДЕЛАТЬ
+    app.post('/api/edit_avatar', async (request, response)=>{
+        const token = request.body.token;
+        const image = request.files.image; //последнее свойство как название файла
+        const img_url = image.name;
+        try{
+            await editAvatar(token,img_url);
+            await image.mv(`${__dirname}/../../media/user/user_avatars/${img_url}`);
+            response.status(200).send('Аватар отредактирован!');
+        }catch (e){
+            response.status(401).send(e);
+        }
+    });
+
+    //Редактировать информацию
+    app.post('/api/edit_about', async (request, response)=>{
+        const token = request.body.token;
+        const about = request.body.about;
+        try{
+            await editAbout(about,token);
             response.status(200).send('Профиль отредактирован!');
         }catch (e){
             response.status(401).send(e);

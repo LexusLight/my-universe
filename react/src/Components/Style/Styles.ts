@@ -154,7 +154,8 @@ const pageStyles = makeStyles({
         marginLeft:"auto",
         marginRight:"auto",
         borderRadius:90,
-        backgroundImage:`url(https://picsum.photos/100/100)`,
+        backgroundColor: cosmoTheme.palette.secondary.light,
+        color: 'white',
         backgroundSize: 'cover',
     },
     artImage:{
@@ -162,6 +163,8 @@ const pageStyles = makeStyles({
         marginRight:"auto",
         height:200,
         backgroundImage:`url(https://picsum.photos/1000)`,
+        backgroundColor: cosmoTheme.palette.secondary.light,
+        color: 'white',
     },
     page_block:{
 

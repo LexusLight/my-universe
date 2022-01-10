@@ -1,4 +1,4 @@
-const {User,UserLink} = require('../models');
+const {User,UserLink,UserArt} = require('../models');
 const bcrypt = require('bcrypt');
 const {tokenDecode,tokenSign} = require('./webtoken');
 
@@ -57,11 +57,45 @@ const getAvatar = async(username)=>{
     return(img_url_object)
 }
 
-//Редактирование профиля
-const editUser = async(username,password,token) => {
+//Сменить Аватарку, ДОДЕЛАТЬ УДАЛЕНИЕ И ПЕРЕЗАПИСЬ
+const editAvatar = async(token, img_url) => {
     const token_obj = tokenDecode(token);
-    const salt = await bcrypt.genSalt(10);
-    const hash_password = await bcrypt.hash(password, salt);
+    const user = await User.findOne({
+        where:{
+            id: token_obj.id,
+            username: token_obj.username,
+        },
+    });
+    if(user === null){
+        throw('Невалидный токен');
+    }else{
+        await user.update({
+            img_url: img_url,
+        });
+    }
+}
+
+//Сменить Описание профиля
+const editAbout = async(token, about) => {
+    const token_obj = tokenDecode(token);
+    const user = await User.findOne({
+        where:{
+            id: token_obj.id,
+            username: token_obj.username,
+        },
+    });
+    if(user === null){
+        throw('Невалидный токен');
+    }else{
+        await user.update({
+            about: about,
+        });
+    }
+}
+
+//Сменить Юзернейм
+const editUsername = async(token, username) => {
+    const token_obj = tokenDecode(token);
     const user = await User.findOne({
         where:{
             id: token_obj.id,
@@ -73,10 +107,11 @@ const editUser = async(username,password,token) => {
     }else{
         await user.update({
             username: username,
-            password: hash_password,
         });
     }
 }
+
+
 
 //Добавление линка
 const addLink = async (username,url,link_name,token) => {
@@ -99,10 +134,33 @@ const addLink = async (username,url,link_name,token) => {
     }
 };
 
+//Список артов
+const artList = async(username) => {
+    const user = await User.findOne({
+        where:{
+            username:username,
+        },
+    });
+    let arr = await UserArt.findAll({
+        where: {
+            userId: user.id,
+        },
+        attributes: ['id','img_name','img_url','img_about'],
+        limit: 6
+    });
+    await arr.forEach((item)=>{
+        item.img_url = 'character/character_avatars/'+item.avatar;
+    })
+    return arr;
+}
+
 module.exports = {
     registerUser,
     authUser,
     getAvatar,
-    editUser,
+    editAvatar,
+    editAbout,
+    editUsername,
     addLink,
+    artList,
 }

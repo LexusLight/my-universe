@@ -10,13 +10,12 @@ const addCharacter = async (name, avatar, age, sex, full_name, about, likes, dis
             username: token_obj.username,
             }
         });
-
     if(user === null){
         throw("Невалидный токен");
     }else{
         let character = await Character.findOne({
             where:{
-                name:name,
+                name: name,
                 userId: user.id,
             }
         });

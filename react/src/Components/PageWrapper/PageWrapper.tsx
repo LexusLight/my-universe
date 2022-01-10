@@ -4,13 +4,25 @@ import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 import Profile from "../Profile/Profile";
 import World from "../World/World";
 import Character from "../Character/Character";
-import {AppBar, Box, Button, Container, Grid, Paper, Toolbar, Typography} from "@material-ui/core";
+import {
+    AppBar,
+    BottomNavigation,
+    BottomNavigationAction,
+    Box,
+    Button,
+    Container,
+    Grid,
+    Paper,
+    Toolbar,
+    Typography
+} from "@material-ui/core";
 import {ThemeProvider} from "@material-ui/core/styles";
 import {cosmoTheme} from  "./Theme"
 import {wrapperStyles} from "../Style/Styles"
 import PageWrapperToolbar from "./PageWrapperToolbar";
 
 import userStore from "../../Stores/UserStore";
+import {Android} from "@material-ui/icons";
 
 
 const PageWrapper = () =>    {
@@ -29,6 +41,13 @@ const PageWrapper = () =>    {
                             </Switch>
                             {/*<StateComponent url={"http://localhost:1337/api/testList"}/>*/}
                         </Container>
+                        <BottomNavigation className={styles.primaryDark}>
+                            <BottomNavigationAction label="Google" icon={<Android className={styles.primaryDark} />}/>
+                            <BottomNavigationAction label="Google" icon={<Android className={styles.primaryDark}/>}/>
+                            <BottomNavigationAction label="Google" icon={<Android className={styles.primaryDark}/>}/>
+                            <BottomNavigationAction label="Google" icon={<Android className={styles.primaryDark}/>}/>
+                            <BottomNavigationAction label="Google" icon={<Android className={styles.primaryDark}/>}/>
+                        </BottomNavigation>
                     </Box>
                 </Paper>
             </BrowserRouter>
