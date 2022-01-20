@@ -7,12 +7,18 @@ const registerUser = async (username,email,password,img_url) => {
     let salt = await bcrypt.genSalt(10);
     let hash_password = await bcrypt.hash(password, salt);
     try {
-        await User.create({
+        const user = await User.create({
             username: username,
             email: email,
             password: hash_password,
             img_url: img_url,
         });
+        const token = tokenSign({ id: user.id, username: user.username });
+        const auth_obj = {
+            username: user.username,
+            token: token,
+        }
+        return auth_obj;
     } catch (e){
         throw ("Имя пользователя или почта уже существуют.");
     }

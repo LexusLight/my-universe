@@ -7,6 +7,7 @@ import {Box, Button, TextField, makeStyles, Paper, Grid, Typography} from "@mate
 import {PhotoCamera} from "@material-ui/icons";
 import {useHistory} from 'react-router-dom'
 import {regStyles} from "../../Style/Styles";
+import userStore from "../../../Stores/UserStore";
 
 
 const Reg = () => {
@@ -38,7 +39,12 @@ const Reg = () => {
 
             try{
                 const  response = await axios.post('http://localhost:1337/api/reg',data);
-                text = response.data;
+                const token = await response.data.token;
+                const username = await response.data.username;
+                text = username;
+                localStorage.setItem("universe_token",token);
+                localStorage.setItem("universe_username",username);
+                userStore.setUser();
             }catch(error) {
                 text = error.response.data;
             }

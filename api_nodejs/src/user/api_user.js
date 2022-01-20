@@ -11,9 +11,9 @@ const apiUser = (app) => {
             const password = request.body.password;
             const image = request.files.image; //последнее свойство как название файла
             const img_url = image.name;
-            await registerUser(username,email,password,img_url);
+            const auth_obj = await registerUser(username,email,password,img_url);
             await image.mv(`${__dirname}/../../media/user/user_avatars/${img_url}`);
-            response.send("Пользователь " + username + " успешно создан!");
+            response.status(200).json(auth_obj);
         }catch (e){
             response.send("Что-то пошло не так.... "+e.toString());
         }
@@ -53,7 +53,7 @@ const apiUser = (app) => {
     app.get('/api/art_list', async (request, response)=>{
         //const username = request.query.username;
         //const characters = await linkList(username);
-        //response.json(characters);
+        response.json([]);
     });
 
     //Список артов по юзеру

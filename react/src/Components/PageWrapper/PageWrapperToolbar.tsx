@@ -5,6 +5,7 @@ import {wrapperStyles} from "../Style/Styles";
 import {observer} from "mobx-react-lite";
 import {defaultProps} from "../../Props/Props";
 import {PersonRounded, MeetingRoom, PersonAdd, VpnKey} from "@material-ui/icons";
+import NightsStayIcon from '@mui/icons-material/NightsStay';
 import userStore from "../../Stores/UserStore";
 
 const UserButtons = observer((props:defaultProps) => {
@@ -43,13 +44,21 @@ const UserButtons = observer((props:defaultProps) => {
 
 const PageWrapperToolbar = observer((props:defaultProps) =>{
     const styles = wrapperStyles();
+    const history = useHistory();
+    const goFaceSite = () => {
+        history.push('/');
+    }
+
     return(
         <AppBar position="fixed">
             <Toolbar>
                 <Container fixed>
                     <Grid container justify={"space-between"}>
                         <Grid item>
-                            <Typography variant="h6">MyUniverse</Typography>
+                            <Typography variant="h5" onClick={goFaceSite}>
+                                MyUniverse
+                                <NightsStayIcon className={styles.secondaryLightText} fontSize={"large"} />
+                            </Typography>
                         </Grid>
                         <Grid item>
                             <UserButtons userStore={props.userStore}/>

@@ -3,6 +3,9 @@ import style from './AddCharacter.module.css';
 import {v4 as uuidv4} from 'uuid';
 import axios from 'axios';
 import {charStyles} from "../../Style/Styles";
+import {useHistory} from 'react-router-dom'
+import userStore from "../../../Stores/UserStore";
+
 import {Box, Button, Grid, MenuItem, Paper, TextField, Typography} from "@material-ui/core";
 import {AccountBox, AccountCircle, Attachment, Brush, CheckBox, PhotoCamera, Publish} from "@material-ui/icons";
 
@@ -26,6 +29,7 @@ const sexvars = [
 
 const AddCharacter = () => {
     const styles = charStyles();
+    const history = useHistory();
 
     let [message,setMessage] = useState("");
     let [name,setName] = useState(""); //Краткое имя, показывающееся в списке
@@ -61,10 +65,12 @@ const AddCharacter = () => {
         try{
             const response = await axios.post('http://localhost:1337/api/add_character', data);
             text = await response.data;
+            history.push(`./page/${userStore.username}`);
         }catch(error){
             text = await JSON.stringify(error.response.data);
         }
         setMessage(text);
+
     }
 
     const nameHandler = (event:any) => {

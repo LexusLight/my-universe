@@ -20,55 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82628ef5-bb09-481a-91a5-681729eabbd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/0b414cd2-c929-4798-a9a3-1aa2177e6cf5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/369eaec7-bf38-4f1e-808c-b2fcbbeb9159.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/40048c0d-aa01-48b5-bba3-018ad89e6ad9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/48ee7fa6-488b-4813-977c-62ecc7e9f657.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/63495daf-533f-4e65-81fb-10f07c675acc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/7f067190-0acc-461f-9319-95d7998f9bbb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/8615e2e5-044c-4c3a-80f3-8714d5614e8d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/abd38371-106e-4768-950e-c37cad960640.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/b9c3d55b-4ab4-4566-a20d-c6ff7f826922.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/c0982c4b-4230-4e98-a113-dc72b55d1f67.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/df353683-381d-40d5-a891-1505d0b3e0b5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/f0997e0b-1832-4672-802d-e3f02e5e5765.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/127a5f2d-981f-4442-b983-4e4cd9e556c6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/1bd45efa-e393-431f-9b76-c830bd8dfed6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/1e1d7bc6-af53-426c-85e5-16ebbc6e34ef.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/6d18856b-1cea-4f3a-abbc-ed2c36bfa3b8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/870c1ecc-0b71-4cb1-8f93-9f56c956b3bf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/91297b51-9947-486c-9a45-b46fce3d05d4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/a177fa51-ce26-47e3-ad2b-020b6e43c6d8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/aacba0cd-f5ad-430e-a12e-a440265e1bf3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/cd529acb-10cf-4eac-827b-7352cc12b14a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/ef9efad1-9c2e-4cd5-849f-a3129b24e0ad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/f72a7494-6901-4b8e-8c68-eda64e8bb2e4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/fd636e55-a7f5-45ee-987c-356de0917c7f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/040f4f8d-a9bb-41f0-8a8d-4248c2175bfd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/09b24e0d-c2b7-42b2-a30a-0592274b4136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/0ea252e0-9bc8-4a3d-9c4d-538a0a2eab66.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/1bd89873-3d5a-4605-8b3e-089c261ae12a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/2377c073-25c8-4ee2-9657-387c958430bd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/262a09c3-ed4c-4837-92e7-1d7a8b48f29f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/80f592c6-5ca7-496d-9a01-2f94af06208c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/897baa1f-0b5c-40c5-888b-d07b03e82388.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/ad21a267-97b4-4f29-82b7-0cccd47e9c75.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/c21558ed-2f7f-468e-9a85-f94da6c2121e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/e002523e-c61a-4807-a834-6339da5cf10b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/e57a8bca-7372-4381-89dd-1ac0cd88c966.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/a2715d75-d266-4bcf-9c9c-bd42cf7a36d9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Arts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Characters.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Links.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/0f8d66ae-8579-41a7-9bf0-a344a552317f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/6c898496-70d9-463a-9afd-719957b684cd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/77861909-e056-440a-978b-6bdeb292ad6c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/7d16f25e-b211-4a4d-bfa2-825f6234423b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/a24b14b1-cc90-4741-aeb9-ea8ca294d128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_avatars/e85fe875-0443-4647-a218-5f3941ab4a49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/2195ac7b-e25e-4432-aae8-c86fd83b265e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/78b166dd-f198-48d7-a0b4-06a3af61d93d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/962686db-febd-495f-8f2e-3fd48d6d0be0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/a6c618c7-8a1c-4789-b8b7-ed13783bfbc3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/c27a094b-0bf7-4642-8289-f847a0ac2148.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_images/f0dc9be2-1fab-4d3e-b246-7206a9377590.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/286cbfab-cb87-4057-a302-25e6b264a416.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/57927115-6481-4502-9c21-60c70192e3cb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/91987923-0d6e-4b2c-b57b-582a978b721f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/a0edd277-fdbf-4e0a-abe1-048be54bcf7e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/b228e965-8bd6-44c1-88ad-e3956dc8dc66.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/character/character_references/c928bc39-4982-4277-b774-6f4a952ac379.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/31a9b588-701c-41fe-8e4e-af1fcd5a50af.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/4dc893ad-1a6a-4404-a8e1-0dc625d64d9a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/914e952d-40e0-4c5f-bf45-3273b1f2cf3b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api_nodejs/media/user/user_avatars/d5b3e8bb-3e77-4a8a-b107-de795ca54e0e.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/database.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/database.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/character/query_character.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/character/query_character.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api_nodejs/src/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/models.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/api_user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api_nodejs/src/user/query_user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Character/AddCharacter/AddCharacter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/PageWrapper/PageWrapperToolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Arts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Arts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Characters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Characters.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditCharacters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/EditPage/EditCharacters.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Page/Page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Profile/Reg/Reg.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react/src/Components/Style/Styles.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +88,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/react/src/Components/Profile/Page" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\GitHub\my-universe\react\node_modules\typescript\lib" />
@@ -165,6 +152,11 @@
       <workItem from="1632204836469" duration="4989000" />
       <workItem from="1641687760674" duration="2043000" />
       <workItem from="1641811924669" duration="22138000" />
+      <workItem from="1642356499187" duration="299000" />
+      <workItem from="1642424403766" duration="350000" />
+      <workItem from="1642598617804" duration="98000" />
+      <workItem from="1642600750992" duration="602000" />
+      <workItem from="1642682385624" duration="10883000" />
     </task>
     <servers />
   </component>
@@ -187,6 +179,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="580" y="173" key="FileChooserDialogImpl" timestamp="1642598684080">
+      <screen x="64" y="0" width="1472" height="864" />
+    </state>
+    <state x="580" y="173" key="FileChooserDialogImpl/64.0.1472.864/-1858.-284.1858.1080@64.0.1472.864" timestamp="1642598684080" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1641827266166">
       <screen x="64" y="0" width="1472" height="864" />
     </state>

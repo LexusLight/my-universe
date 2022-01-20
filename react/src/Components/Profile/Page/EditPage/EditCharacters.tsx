@@ -11,7 +11,7 @@ const EditCharacters = () => {
                 return(
                     <Grid item lg={2} md={4} sm={4} xs={6} key={item}>
                         <Paper>
-                            <Box className={styles.characterCircle}></Box>
+                            <Box className={styles.characterCircle}/>
                             <Typography>{item}</Typography>
                             <Typography variant={"h6"}>♂</Typography>
                         </Paper>

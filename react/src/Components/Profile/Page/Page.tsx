@@ -17,7 +17,7 @@ const Page = (props:defaultProps) => {
 
     useEffect(() => {
         const getRequests = async () => {
-            let response = await axios.get(
+            return await axios.get(
                 'http://localhost:1337/api/avatar',
                 {
                     params: {
@@ -25,10 +25,11 @@ const Page = (props:defaultProps) => {
                     }
                 }
             )
-            setAvatar(response.data.img_url)
         }
-        getRequests().then();
-    },[])
+        getRequests().then((response:any)=>{
+            setAvatar(response.data.img_url)
+        })
+    },[username])
 
     return (
         <Paper>
@@ -42,7 +43,7 @@ const Page = (props:defaultProps) => {
                                 <Grid xl={12} lg={12} item md={12} sm={12} xs={12}>
                                     <Box className={styles.avatarCircle}
                                          border={1} mt={1}
-                                         style={{backgroundImage:`url(http://127.0.0.1:1337/${avatar})`}} //Как поставить https?
+                                         style={avatar&&{backgroundImage:`url(http://127.0.0.1:1337/${avatar})`}} //Как поставить https?
                                     >
                                     </Box>
                                     <br/>

@@ -26,24 +26,22 @@ const Arts = () => {
     },[])
 
     return(
-        <Grid container justify={"flex-start"}>
+        <Grid container justify={"flex-start"} alignItems={"center"} direction="row">
             {arts.map((item:any)=>{
                 return(
                     <Grid item md={4} sm={4} xs={4} key={item}>
                         <Paper>
-                            <Box className={styles.artImage} style={{backgroundImage:`url(http://127.0.0.1:1337/${item.img_url})`}}>
+                            <Box className={styles.artImage} style={arts&&{backgroundImage:`url(http://127.0.0.1:1337/${item.img_url})`}}>
                             {/*    Что то такое ляля*/}
                             </Box>
                         </Paper>
                     </Grid>
                 )
             })}
-            {arts.length < 6 && localStorage.getItem("universe_username") == username &&
+            {arts.length < 5 && localStorage.getItem("universe_username") == username &&
             <Grid item md={4} sm={4} xs={4}>
-                <Paper>
-                    <Box className={styles.artImage}>
-                        <AddPhotoAlternate style={{fontSize:50}}/>
-                    </Box>
+                <Paper className={styles.artImage}>
+                    <AddPhotoAlternate style={{fontSize:50, marginTop:70}}/>
                 </Paper>
             </Grid>
             }

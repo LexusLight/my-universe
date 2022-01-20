@@ -27,6 +27,9 @@ const wrapperStyles = makeStyles((theme) => ({
     secondaryLight:{
         color: "white",
         backgroundColor: cosmoTheme.palette.secondary.light,
+    },
+    secondaryLightText:{
+        color: cosmoTheme.palette.secondary.light,
     }
 }))
 
@@ -159,12 +162,12 @@ const pageStyles = makeStyles({
         backgroundSize: 'cover',
     },
     artImage:{
-        marginLeft:"auto",
-        marginRight:"auto",
+        // marginLeft:"auto",
+        // marginRight:"auto",
         height:200,
-        backgroundImage:`url(https://picsum.photos/1000)`,
         backgroundColor: cosmoTheme.palette.secondary.light,
         color: 'white',
+
     },
     page_block:{
 

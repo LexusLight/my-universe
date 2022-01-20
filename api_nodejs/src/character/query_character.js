@@ -85,7 +85,7 @@ const characterList = async(username) => { //Список персонажей �
             userId: user.id,
         },
         attributes: ['id', 'name', 'sex', 'avatar'],
-        limit: 6
+        limit: 5
     });
     await arr.forEach((item)=>{
         item.avatar = 'character/character_avatars/'+item.avatar;
