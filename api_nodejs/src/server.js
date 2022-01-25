@@ -3,6 +3,7 @@ const express = require('express');
 const fileUpload = require('express-fileupload');
 const {apiTest} = require("./test_api/api_test");
 const {apiUser} = require('./user/api_user');
+const {apiArt} = require('./art/api_art');
 const {apiCharacter} = require('./character/api_character');
 
 const app = express();
@@ -22,6 +23,7 @@ app.use((request, response, next) => {
 
 apiUser(app);
 apiCharacter(app);
+apiArt(app);
 apiTest(app);
 
 app.listen(1337, () => {

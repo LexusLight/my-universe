@@ -49,20 +49,6 @@ const apiUser = (app) => {
         //response.json(characters);
     });
 
-    //Список артов по юзеру
-    app.get('/api/art_list', async (request, response)=>{
-        //const username = request.query.username;
-        //const characters = await linkList(username);
-        response.json([]);
-    });
-
-    //Список артов по юзеру
-    app.post('/api/add_arts', async (request, response)=>{
-        //const username = request.query.username;
-        //const characters = await linkList(username);
-        //response.json(characters);
-    });
-
     //Информация о юзере
     app.get('/api/about', async (request, response)=>{
         //const username = request.query.username;

@@ -1,5 +1,5 @@
 import {makeStyles} from "@material-ui/core/styles";
-import {cosmoTheme} from "../PageWrapper/Theme";
+import {cosmoTheme} from "./Theme";
 
 const wrapperStyles = makeStyles((theme) => ({
     paper:{
@@ -83,7 +83,6 @@ const charStyles = makeStyles({
         //marginTop:10,
         borderRadius:1,
     },
-
     picIcon:{
         transform:"scale(4,4)",
     },
@@ -94,6 +93,30 @@ const charStyles = makeStyles({
     formInputLong:{
         width: '70%',
         maxWidth: 600,
+    },
+    formError:{
+        marginLeft: "auto",
+        marginRight: "auto",
+        maxWidth: 400,
+    }
+},)
+
+const artStyles = makeStyles({
+    imageArt:{
+        height: "300px",
+        width: "50%",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        //marginTop:10,
+        borderRadius:1,
+    },
+    formInputLong:{
+        width: '70%',
+        maxWidth: 600,
+    },
+    picIcon:{
+        transform:"scale(4,4)",
     },
     formError:{
         marginLeft: "auto",
@@ -162,8 +185,9 @@ const pageStyles = makeStyles({
         backgroundSize: 'cover',
     },
     artImage:{
-        // marginLeft:"auto",
-        // marginRight:"auto",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
         height:200,
         backgroundColor: cosmoTheme.palette.secondary.light,
         color: 'white',
@@ -192,5 +216,6 @@ export{
     charStyles,
     pageStyles,
     editStyles,
+    artStyles,
 }
 

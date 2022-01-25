@@ -8,6 +8,7 @@ import {PhotoCamera} from "@material-ui/icons";
 import {useHistory} from 'react-router-dom'
 import {regStyles} from "../../Style/Styles";
 import userStore from "../../../Stores/UserStore";
+import {Alert, AlertTitle} from "@material-ui/lab";
 
 
 const Reg = () => {
@@ -115,9 +116,9 @@ const Reg = () => {
 
                             {message &&
                             <Box mb={2} className={styles.formError}>
-                                {/*<Alert severity="error" >*/}
-                                {/*    <AlertTitle>{message}</AlertTitle>*/}
-                                {/*</Alert>*/}
+                                <Alert severity="error" >
+                                    <AlertTitle>{message}</AlertTitle>
+                                </Alert>
                             </Box>}
 
                             <Button color="secondary" variant="outlined" type="submit"> Register </Button>

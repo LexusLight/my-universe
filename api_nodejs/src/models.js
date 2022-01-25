@@ -131,6 +131,11 @@ UserArt.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
+        about: {
+            type: DataTypes.TEXT,
+            allowNull: true,
+        },
+
     },
     {sequelize, modelName:'user_art'}
 );

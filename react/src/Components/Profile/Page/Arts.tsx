@@ -2,10 +2,11 @@ import {Box, Grid, Paper} from "@material-ui/core";
 import {AddPhotoAlternate} from "@material-ui/icons";
 import React, {useEffect, useState} from "react";
 import {pageStyles} from "../../Style/Styles";
-import {useParams} from "react-router-dom";
+import {useHistory, useParams} from "react-router-dom";
 import axios from "axios";
 
 const Arts = () => {
+    const history = useHistory();
     const styles = pageStyles();
     const {username} = useParams();
     const [arts,setArts] = useState([]);
@@ -25,6 +26,10 @@ const Arts = () => {
         getRequests();
     },[])
 
+    const goToAddArt = () => {
+        history.push(`/profile/add_art`);
+    }
+
     return(
         <Grid container justify={"flex-start"} alignItems={"center"} direction="row">
             {arts.map((item:any)=>{
@@ -39,8 +44,8 @@ const Arts = () => {
                 )
             })}
             {arts.length < 5 && localStorage.getItem("universe_username") == username &&
-            <Grid item md={4} sm={4} xs={4}>
-                <Paper className={styles.artImage}>
+            <Grid item md={4} sm={4} xs={4} >
+                <Paper className={styles.artImage} onClick={goToAddArt}>
                     <AddPhotoAlternate style={{fontSize:50, marginTop:70}}/>
                 </Paper>
             </Grid>

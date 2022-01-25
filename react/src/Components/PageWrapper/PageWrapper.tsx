@@ -17,7 +17,7 @@ import {
     Typography
 } from "@material-ui/core";
 import {ThemeProvider} from "@material-ui/core/styles";
-import {cosmoTheme} from  "./Theme"
+import {cosmoTheme} from "../Style/Theme"
 import {wrapperStyles} from "../Style/Styles"
 import PageWrapperToolbar from "./PageWrapperToolbar";
 

@@ -7,6 +7,7 @@ import {Box, Button, Grid, makeStyles, Paper, TextField, Typography} from "@mate
 import userStore from "../../../Stores/UserStore";
 import {useHistory} from 'react-router-dom'
 import {authStyles} from "../../Style/Styles";
+import {Alert, AlertTitle} from "@material-ui/lab";
 //import {Alert, AlertTitle} from "@material-ui/lab";
 
 
@@ -76,9 +77,9 @@ const Auth = () => {
 
                             {message &&
                             <Box mb={2} className={styles.formError}>
-                                {/*<Alert severity="error" >*/}
-                                {/*    <AlertTitle>{message}</AlertTitle>*/}
-                                {/*</Alert>*/}
+                                <Alert severity="error" >
+                                    <AlertTitle>{message}</AlertTitle>
+                                </Alert>
                             </Box>}
 
                             <Button color="secondary" variant="outlined" type="submit"> Авторизация </Button>
