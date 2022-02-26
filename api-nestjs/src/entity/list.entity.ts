@@ -1,6 +1,9 @@
-import { Entity } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class ListEntity {
-  //Айди, Массив строк. M-1 Article
+  @PrimaryGeneratedColumn()
+  id: number;
+  @Column({ unique: true })
+  text: string; //Заменить на строки
 }

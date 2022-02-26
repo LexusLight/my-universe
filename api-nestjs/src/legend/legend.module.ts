@@ -4,6 +4,6 @@ import { LegendController } from './legend.controller';
 
 @Module({
   providers: [LegendService],
-  controllers: [LegendController]
+  controllers: [LegendController],
 })
 export class LegendModule {}

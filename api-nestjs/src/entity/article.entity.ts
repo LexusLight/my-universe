@@ -1,10 +1,10 @@
-import { Entity, ManyToMany, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToMany, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class ArticleEntity {
   @PrimaryGeneratedColumn()
   id: number;
-  @PrimaryColumn({ unique: true })
+  @Column({ unique: true })
   title: string;
   /*
   1-1 Character
